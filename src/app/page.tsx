@@ -1,69 +1,103 @@
-import Image from "next/image";
+import React from 'react';
+import HeroSection from '@/components/home/HeroSection';
+import YouTubeVideoSection from '@/components/home/YouTubeVideoSection';
+import FeaturedMessageSection from '@/components/home/FeaturedMessageSection';
+import UpcomingEventsSection from '@/components/home/UpcomingEventsSection';
+import DirectBookingCta from '@/components/home/DirectBookingCta';
+import { INITIAL_MESSAGES } from '@/data/mockData';
+import { BookOpen, Flame, HeartHandshake, Award, Church, Compass } from 'lucide-react';
+import Link from 'next/link';
 
-export default function Home() {
+export default function HomePage() {
+  const featuredSermon = INITIAL_MESSAGES.find((m) => m.featured) || INITIAL_MESSAGES[0];
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="flex-1 flex flex-col bg-[#0D0D0E]">
+      {/* Hero Section */}
+      <HeroSection />
+
+      {/* Official YouTube Video Broadcasts mapped from @bishopndubuisiobi6348 */}
+      <YouTubeVideoSection />
+
+      {/* Featured Synod Charge / Sermon */}
+      <FeaturedMessageSection sermon={featuredSermon} />
+
+      {/* Four Diocesan Pillars Section */}
+      <section className="py-20 bg-[#0B0B0C] border-b border-[#232326]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
+            <span className="text-[#FF5500] text-sm font-bold tracking-wide uppercase block">
+              Diocesan Strategic Priorities
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-sans font-extrabold text-white">
+              The Four Pillars of the Episcopacy
+            </h2>
+            <p className="text-zinc-400 text-sm sm:text-base leading-relaxed">
+              Under the leadership of The Rt. Rev. Ndubuisi Obi, the Diocese of Nnewi advances the Great Commission through four foundational commitments.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-[#141416] p-7 rounded-[28px] border border-[#232326] hover:border-[#FF5500] transition-all space-y-4 shadow-xl group">
+              <span className="text-sm font-mono font-bold text-[#FF5500] block">01</span>
+              <div className="w-12 h-12 rounded-2xl bg-[#FF5500]/15 text-[#FF5500] border border-[#FF5500]/30 flex items-center justify-center font-bold">
+                <BookOpen className="w-6 h-6" />
+              </div>
+              <h3 className="font-sans text-lg font-bold text-white group-hover:text-[#FF5500] transition-colors">
+                Biblical Orthodoxy
+              </h3>
+              <p className="text-xs text-zinc-400 leading-relaxed">
+                Upholding the timeless doctrines of Holy Scripture and sound Anglican liturgical heritage without compromise or modern syncretism.
+              </p>
+            </div>
+
+            <div className="bg-[#141416] p-7 rounded-[28px] border border-[#232326] hover:border-[#FF5500] transition-all space-y-4 shadow-xl group">
+              <span className="text-sm font-mono font-bold text-[#FF5500] block">02</span>
+              <div className="w-12 h-12 rounded-2xl bg-[#FF5500]/15 text-[#FF5500] border border-[#FF5500]/30 flex items-center justify-center font-bold">
+                <Flame className="w-6 h-6" />
+              </div>
+              <h3 className="font-sans text-lg font-bold text-white group-hover:text-[#FF5500] transition-colors">
+                Altar of Intercession
+              </h3>
+              <p className="text-xs text-zinc-400 leading-relaxed">
+                Igniting persistent prayer altars across all parishes and archdeaconries to break generational bondage and birth territorial revival.
+              </p>
+            </div>
+
+            <div className="bg-[#141416] p-7 rounded-[28px] border border-[#232326] hover:border-[#FF5500] transition-all space-y-4 shadow-xl group">
+              <span className="text-sm font-mono font-bold text-[#FF5500] block">03</span>
+              <div className="w-12 h-12 rounded-2xl bg-[#FF5500]/15 text-[#FF5500] border border-[#FF5500]/30 flex items-center justify-center font-bold">
+                <HeartHandshake className="w-6 h-6" />
+              </div>
+              <h3 className="font-sans text-lg font-bold text-white group-hover:text-[#FF5500] transition-colors">
+                Godly Christian Home
+              </h3>
+              <p className="text-xs text-zinc-400 leading-relaxed">
+                Championed alongside Mama Nnewi (Mrs. Ukamaka Obi) through the Mothers’ Union to heal marriages and nurture disciplined youth.
+              </p>
+            </div>
+
+            <div className="bg-[#141416] p-7 rounded-[28px] border border-[#232326] hover:border-[#FF5500] transition-all space-y-4 shadow-xl group">
+              <span className="text-sm font-mono font-bold text-[#FF5500] block">04</span>
+              <div className="w-12 h-12 rounded-2xl bg-[#FF5500]/15 text-[#FF5500] border border-[#FF5500]/30 flex items-center justify-center font-bold">
+                <Award className="w-6 h-6" />
+              </div>
+              <h3 className="font-sans text-lg font-bold text-white group-hover:text-[#FF5500] transition-colors">
+                Enterprise &amp; Diligence
+              </h3>
+              <p className="text-xs text-zinc-400 leading-relaxed">
+                Leveraging the Bishop’s 17 years in enterprise to foster vocational empowerment, commercial integrity, and diocesan self-reliance.
+              </p>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Upcoming Events Section */}
+      <UpcomingEventsSection />
+
+      {/* Direct Booking CTA Section */}
+      <DirectBookingCta />
+    </main>
   );
 }
