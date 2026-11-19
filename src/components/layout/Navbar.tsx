@@ -39,10 +39,10 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-[#0D0D0E]/90 backdrop-blur-2xl border-b border-white/[0.08] shadow-[0_4px_30px_rgba(0,0,0,0.6)] text-white">
       {/* Sleek Top Utility Bar with Bigger Captions */}
-      <div className="bg-[#080809] px-4 py-2 text-xs sm:text-sm text-zinc-400 border-b border-white/[0.04]">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
+      <div className="bg-[#080809] px-4 sm:px-6 lg:px-10 py-2.5 text-xs sm:text-sm text-zinc-400 border-b border-white/[0.04]">
+        <div className="max-w-[1536px] mx-auto flex items-center justify-between">
           {/* Left: Audience Days */}
-          <div className="flex items-center gap-2.5">
+          <div className="flex items-center gap-3">
             <span className="relative flex h-2.5 w-2.5">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FF5500] opacity-75" />
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#FF5500]" />
@@ -53,12 +53,12 @@ export default function Navbar() {
           </div>
 
           {/* Right: Quick Channel & WhatsApp Links */}
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-6">
             <a
               href={BISHOP_YOUTUBE_CHANNEL}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:inline-flex items-center gap-2 text-zinc-200 hover:text-[#FFAA40] transition font-semibold text-xs sm:text-sm"
+              className="hidden sm:inline-flex items-center gap-2.5 text-zinc-200 hover:text-[#FFAA40] transition font-semibold text-xs sm:text-sm"
             >
               <Video className="w-4 h-4 text-[#FF5500]" />
               <span>YouTube: @bishopndubuisiobi6348</span>
@@ -77,7 +77,7 @@ export default function Navbar() {
       </div>
 
       {/* Main Navbar */}
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-22 flex items-center justify-between gap-4">
+      <nav className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-10 h-24 flex items-center justify-between gap-6">
         {/* Left: Brand / Episcopal Seal */}
         <Link href="/" className="flex items-center gap-4 group shrink-0">
           <div className="relative">
@@ -111,11 +111,10 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className={`px-4.5 py-2.5 rounded-full text-sm font-semibold tracking-wide transition-all duration-200 ${
-                  active
-                    ? 'bg-[#FF5500] text-white shadow-md shadow-[#FF5500]/30 font-bold'
-                    : 'text-zinc-300 hover:text-white hover:bg-white/[0.08]'
-                }`}
+                className={`px-4.5 py-2.5 rounded-full text-sm font-semibold tracking-wide transition-all duration-200 ${active
+                  ? 'bg-[#FF5500] text-white shadow-md shadow-[#FF5500]/30 font-bold'
+                  : 'text-zinc-300 hover:text-white hover:bg-white/[0.08]'
+                  }`}
               >
                 {link.name}
               </Link>
@@ -185,11 +184,10 @@ export default function Navbar() {
               key={link.name}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
-              className={`block px-5 py-3.5 rounded-2xl text-base font-semibold transition ${
-                isActive(link.href)
-                  ? 'bg-[#FF5500] text-white font-bold shadow-lg shadow-[#FF5500]/25'
-                  : 'text-zinc-300 hover:bg-white/[0.05] hover:text-white'
-              }`}
+              className={`block px-5 py-3.5 rounded-2xl text-base font-semibold transition ${isActive(link.href)
+                ? 'bg-[#FF5500] text-white font-bold shadow-lg shadow-[#FF5500]/25'
+                : 'text-zinc-300 hover:bg-white/[0.05] hover:text-white'
+                }`}
             >
               {link.name}
             </Link>
