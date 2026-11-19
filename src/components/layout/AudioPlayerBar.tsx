@@ -152,11 +152,10 @@ export default function AudioPlayerBar() {
             {/* Low Data Toggle */}
             <button
               onClick={toggleLowDataMode}
-              className={`flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-medium transition border ${
-                lowDataMode
-                  ? 'bg-[#FF5500]/20 border-[#FF5500] text-[#FFAA40]'
-                  : 'bg-white/[0.06] border-white/[0.1] text-zinc-300 hover:text-white'
-              }`}
+              className={`flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-medium transition border ${lowDataMode
+                ? 'bg-[#FF5500]/20 border-[#FF5500] text-[#FFAA40]'
+                : 'bg-white/[0.06] border-white/[0.1] text-zinc-300 hover:text-white'
+                }`}
               title="Toggle Low-Data Mode for Nigerian mobile connections"
             >
               <Wifi className="w-4 h-4" />

@@ -188,8 +188,8 @@ export default function TrackBookingClient() {
                       ? foundBooking.meetingMode === 'in_person'
                         ? 'In-Person at Bishopscourt, Nnewi'
                         : foundBooking.meetingMode === 'whatsapp_call'
-                        ? 'WhatsApp Audio/Video Call'
-                        : 'Direct Phone Call'
+                          ? 'WhatsApp Audio/Video Call'
+                          : 'Direct Phone Call'
                       : foundBooking.venueCityState}
                   </p>
                 </div>

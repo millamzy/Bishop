@@ -66,7 +66,7 @@ export default function MessageDetailClient({ messageId }: { messageId: string }
         title: sermon.title,
         text: `Watch/Listen to "${sermon.title}" by The Rt. Rev. Ndubuisi Obi (Bishop of Nnewi)`,
         url
-      }).catch(() => {});
+      }).catch(() => { });
     } else {
       navigator.clipboard.writeText(url);
       setCopied(true);
@@ -137,22 +137,20 @@ export default function MessageDetailClient({ messageId }: { messageId: string }
           <div className="flex items-center gap-2 border-b border-[#232326] pb-3 pt-2">
             <button
               onClick={() => setActiveMediaTab('video')}
-              className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold transition ${
-                activeMediaTab === 'video'
-                  ? 'bg-[#FF5500] text-white shadow-md shadow-[#FF5500]/25'
-                  : 'bg-[#1C1C20] text-zinc-400 hover:text-white'
-              }`}
+              className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold transition ${activeMediaTab === 'video'
+                ? 'bg-[#FF5500] text-white shadow-md shadow-[#FF5500]/25'
+                : 'bg-[#1C1C20] text-zinc-400 hover:text-white'
+                }`}
             >
               <span>Watch Video</span>
             </button>
 
             <button
               onClick={() => setActiveMediaTab('audio')}
-              className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold transition ${
-                activeMediaTab === 'audio'
-                  ? 'bg-white text-zinc-950 shadow-md'
-                  : 'bg-[#1C1C20] text-zinc-400 hover:text-white'
-              }`}
+              className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold transition ${activeMediaTab === 'audio'
+                ? 'bg-white text-zinc-950 shadow-md'
+                : 'bg-[#1C1C20] text-zinc-400 hover:text-white'
+                }`}
             >
               <Volume2 className="w-3.5 h-3.5" />
               <span>Listen to Audio (Low Data)</span>
@@ -243,11 +241,10 @@ export default function MessageDetailClient({ messageId }: { messageId: string }
 
               <button
                 onClick={handleSaveOffline}
-                className={`p-2.5 rounded-full border transition ${
-                  isSavedOffline
-                    ? 'bg-[#FF5500] text-white border-[#FF5500]'
-                    : 'bg-[#1C1C20] hover:bg-[#25252B] text-zinc-300 border-[#2E2E34]'
-                }`}
+                className={`p-2.5 rounded-full border transition ${isSavedOffline
+                  ? 'bg-[#FF5500] text-white border-[#FF5500]'
+                  : 'bg-[#1C1C20] hover:bg-[#25252B] text-zinc-300 border-[#2E2E34]'
+                  }`}
                 title="Save transcript for offline study"
               >
                 <Bookmark className="w-4 h-4" />
