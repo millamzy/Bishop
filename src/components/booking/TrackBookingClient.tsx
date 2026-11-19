@@ -97,7 +97,7 @@ export default function TrackBookingClient() {
           <Church className="w-3.5 h-3.5 text-[#FF5500]" />
           <span>Live Tracking Portal</span>
         </div>
-        <h1 className="text-3xl sm:text-4xl font-display font-extrabold text-white tracking-tight">
+        <h1 className="text-2xl min-[400px]:text-3xl sm:text-4xl font-display font-extrabold text-white tracking-tight break-words">
           Track Your Booking or Invitation Status
         </h1>
         <p className="text-zinc-400 text-xs sm:text-sm">

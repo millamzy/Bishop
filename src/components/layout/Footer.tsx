@@ -21,12 +21,12 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-[#070709] text-zinc-400 border-t border-white/[0.08] pt-24 pb-32 md:pb-24 relative overflow-hidden">
+    <footer className="bg-[#070709] text-zinc-400 border-t border-white/[0.08] pt-16 sm:pt-24 pb-28 md:pb-24 relative overflow-hidden">
       {/* Ambient background glow */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1100px] h-[350px] bg-[#FF5500]/06 rounded-full blur-[160px] pointer-events-none" />
 
-      <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10 space-y-18">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14">
+      <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10 space-y-12 sm:space-y-18">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-14">
           {/* Column 1: Ministry Info */}
           <div className="space-y-6">
             <div className="flex items-center gap-4">

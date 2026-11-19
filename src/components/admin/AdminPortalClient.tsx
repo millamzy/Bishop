@@ -270,11 +270,11 @@ export default function AdminPortalClient() {
         </div>
 
         {/* Role Toggle Switch */}
-        <div className="flex items-center gap-1.5 bg-[#0D0D0E] p-1.5 rounded-full border border-[#27272A] shrink-0">
-          <span className="text-[11px] text-zinc-500 px-3 font-semibold">Active View:</span>
+        <div className="flex flex-wrap sm:flex-nowrap items-center gap-1.5 bg-[#0D0D0E] p-1.5 rounded-2xl sm:rounded-full border border-[#27272A] shrink-0">
+          <span className="text-[11px] text-zinc-500 px-3 font-semibold w-full sm:w-auto">Active View:</span>
           <button
             onClick={() => setCurrentRole('pastor')}
-            className={`px-3.5 py-1.5 rounded-full text-xs font-bold transition ${
+            className={`px-3.5 py-1.5 rounded-full text-xs font-bold transition flex-1 sm:flex-initial text-center ${
               currentRole === 'pastor'
                 ? 'bg-[#FF5500] text-white shadow-md shadow-[#FF5500]/25'
                 : 'text-zinc-400 hover:text-white'
@@ -284,7 +284,7 @@ export default function AdminPortalClient() {
           </button>
           <button
             onClick={() => setCurrentRole('secretary')}
-            className={`px-3.5 py-1.5 rounded-full text-xs font-bold transition ${
+            className={`px-3.5 py-1.5 rounded-full text-xs font-bold transition flex-1 sm:flex-initial text-center ${
               currentRole === 'secretary'
                 ? 'bg-[#FF5500] text-white shadow-md shadow-[#FF5500]/25'
                 : 'text-zinc-400 hover:text-white'
@@ -314,18 +314,18 @@ export default function AdminPortalClient() {
               setActiveTab('bookings');
               setBookingFilterStatus('pending');
             }}
-            className="px-5 py-2 rounded-full bg-[#FF5500] text-white font-bold text-xs hover:bg-[#E64D00] shrink-0 shadow-md shadow-[#FF5500]/25 transition"
+            className="px-5 py-2 rounded-full bg-[#FF5500] text-white font-bold text-xs hover:bg-[#E64D00] shrink-0 shadow-md shadow-[#FF5500]/25 transition w-full sm:w-auto"
           >
             Review Conflicted Slots
           </button>
         </div>
       )}
 
-      {/* Tabs Menu */}
-      <div className="flex flex-wrap items-center gap-2 border-b border-[#232326] pb-3">
+      {/* Tabs Menu with Smooth Mobile Swipe */}
+      <div className="flex overflow-x-auto pb-3 gap-2 border-b border-[#232326] scrollbar-none -mx-4 px-4 sm:mx-0 sm:px-0">
         <button
           onClick={() => setActiveTab('dashboard')}
-          className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition ${
+          className={`flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition shrink-0 ${
             activeTab === 'dashboard'
               ? 'bg-[#FF5500] text-white shadow-lg shadow-[#FF5500]/20'
               : 'text-zinc-400 hover:text-white hover:bg-[#1A1A1E]'
@@ -337,7 +337,7 @@ export default function AdminPortalClient() {
 
         <button
           onClick={() => setActiveTab('bookings')}
-          className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition ${
+          className={`flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition shrink-0 ${
             activeTab === 'bookings'
               ? 'bg-[#FF5500] text-white shadow-lg shadow-[#FF5500]/20'
               : 'text-zinc-400 hover:text-white hover:bg-[#1A1A1E]'
@@ -345,25 +345,25 @@ export default function AdminPortalClient() {
         >
           <Calendar className="w-4 h-4" />
           <span>
-            Bookings & Invitations ({pendingBookings.length} Pending)
+            Bookings &amp; Invitations ({pendingBookings.length} Pending)
           </span>
         </button>
 
         <button
           onClick={() => setActiveTab('messages')}
-          className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition ${
+          className={`flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition shrink-0 ${
             activeTab === 'messages'
               ? 'bg-[#FF5500] text-white shadow-lg shadow-[#FF5500]/20'
               : 'text-zinc-400 hover:text-white hover:bg-[#1A1A1E]'
           }`}
         >
           <BookOpen className="w-4 h-4" />
-          <span>Synod Charges & Sermons ({messages.length})</span>
+          <span>Synod Charges &amp; Sermons ({messages.length})</span>
         </button>
 
         <button
           onClick={() => setActiveTab('schedule')}
-          className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition ${
+          className={`flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition shrink-0 ${
             activeTab === 'schedule'
               ? 'bg-[#FF5500] text-white shadow-lg shadow-[#FF5500]/20'
               : 'text-zinc-400 hover:text-white hover:bg-[#1A1A1E]'

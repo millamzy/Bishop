@@ -119,15 +119,15 @@ export default function MessagesLibraryView() {
   };
 
   return (
-    <div className="space-y-8 text-white">
+    <div className="space-y-6 sm:space-y-8 text-white">
       {/* Header Bar & Search in Dark Obsidian Card */}
-      <div className="bg-[#141416] rounded-[32px] border border-[#232326] p-6 sm:p-8 shadow-2xl">
+      <div className="bg-[#141416] rounded-[24px] sm:rounded-[32px] border border-[#232326] p-4 min-[400px]:p-6 sm:p-8 shadow-2xl">
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
           <div>
             <span className="text-[#FF5500] text-xs font-bold uppercase tracking-wider block mb-1">
               Diocese of Nnewi Teaching Archives
             </span>
-            <h1 className="text-2xl sm:text-3xl font-sans font-extrabold text-white">
+            <h1 className="text-xl min-[400px]:text-2xl sm:text-3xl font-display font-extrabold text-white break-words">
               Synod Charges, Sermons &amp; Expositions
             </h1>
             <p className="text-xs sm:text-sm text-zinc-400 mt-1">
@@ -135,48 +135,48 @@ export default function MessagesLibraryView() {
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center gap-2.5">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-2.5">
             {/* YouTube Direct Link */}
             <a
               href={BISHOP_YOUTUBE_CHANNEL}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold bg-[#1C1C20] hover:bg-[#25252B] text-white border border-[#2E2E34] transition"
+              className="flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-full text-xs font-semibold bg-[#1C1C20] hover:bg-[#25252B] text-white border border-[#2E2E34] transition active:scale-95"
             >
-              <span className="w-2 h-2 rounded-full bg-[#FF5500] animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-[#FF5500] animate-pulse shrink-0" />
               <span>YouTube Channel</span>
             </a>
 
             {/* Low Data Mode Toggle (Nigeria Friendly) */}
             <button
               onClick={toggleLowDataMode}
-              className={`flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold transition border shrink-0 ${
+              className={`flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-4 py-2 rounded-full text-xs font-semibold transition border shrink-0 active:scale-95 ${
                 lowDataMode
                   ? 'bg-[#FF5500]/20 border-[#FF5500] text-[#FF5500]'
                   : 'bg-[#1C1C20] hover:bg-[#25252B] text-zinc-300 border-[#2E2E34]'
               }`}
               title="Optimizes streaming for slower 2G/3G Nigerian mobile networks"
             >
-              <Wifi className="w-4 h-4 text-[#FF5500]" />
+              <Wifi className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#FF5500] shrink-0" />
               <span>{lowDataMode ? 'Low-Data Active' : 'Low-Data Mode'}</span>
             </button>
           </div>
         </div>
 
         {/* Search Input */}
-        <div className="mt-6 relative">
-          <Search className="w-5 h-5 text-zinc-500 absolute left-4 top-1/2 -translate-y-1/2" />
+        <div className="mt-5 sm:mt-6 relative">
+          <Search className="w-4 h-4 sm:w-5 sm:h-5 text-zinc-500 absolute left-3.5 sm:left-4 top-1/2 -translate-y-1/2" />
           <input
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Search by sermon title, scripture (e.g. Ezekiel 22, 2 Timothy), topic, or synod series..."
-            className="w-full pl-12 pr-4 py-3.5 bg-[#0D0D0E] border border-[#27272A] rounded-2xl text-white placeholder-zinc-500 text-sm focus:outline-none focus:border-[#FF5500] transition"
+            placeholder="Search by sermon title, scripture, topic..."
+            className="w-full pl-10 sm:pl-12 pr-4 py-3 sm:py-3.5 bg-[#0D0D0E] border border-[#27272A] rounded-xl sm:rounded-2xl text-white placeholder-zinc-500 text-xs sm:text-sm focus:outline-none focus:border-[#FF5500] transition"
           />
           {searchQuery && (
             <button
               onClick={() => setSearchQuery('')}
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-xs text-zinc-400 hover:text-white"
+              className="absolute right-3.5 sm:right-4 top-1/2 -translate-y-1/2 text-xs text-zinc-400 hover:text-white"
             >
               Clear
             </button>
@@ -184,7 +184,7 @@ export default function MessagesLibraryView() {
         </div>
 
         {/* Filters Row */}
-        <div className="mt-5 pt-5 border-t border-[#232326] grid grid-cols-1 sm:grid-cols-3 gap-3">
+        <div className="mt-4 sm:mt-5 pt-4 sm:pt-5 border-t border-[#232326] grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3">
           {/* Format / Media Type */}
           <div>
             <label className="block text-[11px] font-bold text-zinc-400 uppercase tracking-wider mb-1">

@@ -318,33 +318,33 @@ END:VCALENDAR`;
         </div>
       ) : (
         /* Form Card */
-        <div className="max-w-4xl mx-auto rounded-3xl bg-[#141416] border border-[#232326] shadow-2xl overflow-hidden">
+        <div className="max-w-4xl mx-auto rounded-[28px] sm:rounded-3xl bg-[#141416] border border-[#232326] shadow-2xl overflow-hidden">
           {/* Tabs Selector */}
-          <div className="grid grid-cols-2 border-b border-[#232326] bg-[#0D0D0E]/60 p-2 gap-2">
+          <div className="grid grid-cols-1 min-[480px]:grid-cols-2 border-b border-[#232326] bg-[#0D0D0E]/60 p-2 sm:p-2.5 gap-2">
             <button
               onClick={() => setActiveTab('counseling')}
-              className={`flex items-center justify-center gap-2 py-3.5 px-4 rounded-full text-xs sm:text-sm font-bold transition ${activeTab === 'counseling'
+              className={`flex items-center justify-center gap-2 py-3 px-3 sm:py-3.5 sm:px-4 rounded-full text-xs sm:text-sm font-bold transition active:scale-95 ${activeTab === 'counseling'
                 ? 'bg-[#FF5500] text-white shadow-lg shadow-[#FF5500]/20'
                 : 'text-zinc-400 hover:text-white hover:bg-[#1A1A1E]'
                 }`}
             >
-              <UserCheck className="w-4 h-4" />
+              <UserCheck className="w-4 h-4 shrink-0" />
               <span>1. Pastoral Audience (1-on-1)</span>
             </button>
 
             <button
               onClick={() => setActiveTab('invitation')}
-              className={`flex items-center justify-center gap-2 py-3.5 px-4 rounded-full text-xs sm:text-sm font-bold transition ${activeTab === 'invitation'
+              className={`flex items-center justify-center gap-2 py-3 px-3 sm:py-3.5 sm:px-4 rounded-full text-xs sm:text-sm font-bold transition active:scale-95 ${activeTab === 'invitation'
                 ? 'bg-[#FF5500] text-white shadow-lg shadow-[#FF5500]/20'
                 : 'text-zinc-400 hover:text-white hover:bg-[#1A1A1E]'
                 }`}
             >
-              <Send className="w-4 h-4" />
-              <span>2. Speaking & Event Invitation</span>
+              <Send className="w-4 h-4 shrink-0" />
+              <span>2. Speaking &amp; Event Invitation</span>
             </button>
           </div>
 
-          <div className="p-6 sm:p-10">
+          <div className="p-4 min-[400px]:p-6 sm:p-10">
             {/* TAB 1: PASTORAL AUDIENCE */}
             {activeTab === 'counseling' && (
               <form onSubmit={handleCounselingSubmit} className="space-y-6">

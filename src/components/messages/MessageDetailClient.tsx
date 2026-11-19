@@ -103,28 +103,28 @@ export default function MessageDetailClient({ messageId }: { messageId: string }
       </div>
 
       {/* Sermon Hero Header Card */}
-      <div className="rounded-[36px] bg-[#141416] border border-[#232326] p-6 sm:p-10 shadow-2xl space-y-6">
-        <div className="flex flex-wrap items-center gap-2.5 text-xs">
-          <span className="px-3.5 py-1 rounded-full bg-[#FF5500]/15 text-[#FF5500] font-bold border border-[#FF5500]/30">
+      <div className="rounded-[28px] sm:rounded-[36px] bg-[#141416] border border-[#232326] p-5 min-[400px]:p-7 sm:p-10 shadow-2xl space-y-5 sm:space-y-6">
+        <div className="flex flex-wrap items-center gap-2 text-xs">
+          <span className="px-3 py-1 rounded-full bg-[#FF5500]/15 text-[#FF5500] font-bold border border-[#FF5500]/30 text-[11px] sm:text-xs">
             Series: {sermon.series}
           </span>
-          <span className="text-zinc-400 flex items-center gap-1 font-medium">
-            <Calendar className="w-3.5 h-3.5 text-[#FF5500]" />
+          <span className="text-zinc-400 flex items-center gap-1 font-medium text-[11px] sm:text-xs">
+            <Calendar className="w-3.5 h-3.5 text-[#FF5500] shrink-0" />
             {sermon.datePreached}
           </span>
           <span className="text-zinc-600">•</span>
-          <span className="text-white font-mono font-bold bg-[#1C1C20] px-2.5 py-0.5 rounded-full border border-[#2A2A30]">
+          <span className="text-white font-mono font-bold bg-[#1C1C20] px-2.5 py-0.5 rounded-full border border-[#2A2A30] text-[11px] sm:text-xs">
             {sermon.scriptureReference}
           </span>
           {hasVideo && (
             <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#FF5500]/20 text-[#FF5500] font-bold text-[10px]">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#FF5500] animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#FF5500] animate-pulse shrink-0" />
               <span>YouTube Video Available</span>
             </span>
           )}
         </div>
 
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-sans font-extrabold text-white tracking-tight leading-tight">
+        <h1 className="text-2xl min-[400px]:text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-white tracking-tight leading-snug sm:leading-tight break-words">
           {sermon.title}
         </h1>
 

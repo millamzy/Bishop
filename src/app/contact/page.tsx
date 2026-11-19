@@ -36,32 +36,32 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="flex-1 bg-[#0D0D0E] text-white py-16 sm:py-24 min-h-screen">
-      <div className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-10 space-y-20">
+    <div className="flex-1 bg-[#0D0D0E] text-white py-12 sm:py-20 lg:py-24 min-h-screen">
+      <div className="max-w-[1536px] mx-auto px-3.5 sm:px-6 lg:px-10 space-y-12 sm:space-y-20">
         {/* Header */}
-        <div className="text-center max-w-4xl mx-auto space-y-5">
-          <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-[#18181B] border border-[#27272A] text-[#FF5500] text-xs sm:text-sm font-bold uppercase tracking-wider">
-            <Church className="w-4 h-4 text-[#FF5500]" />
+        <div className="text-center max-w-4xl mx-auto space-y-3 sm:space-y-5">
+          <div className="inline-flex items-center gap-2 px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full bg-[#18181B] border border-[#27272A] text-[#FF5500] text-xs sm:text-sm font-bold uppercase tracking-wider">
+            <Church className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#FF5500] shrink-0" />
             <span>Bishopscourt &amp; Diocesan Secretariat</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold text-white tracking-tight">
+          <h1 className="text-2xl min-[400px]:text-3xl sm:text-5xl lg:text-6xl font-display font-extrabold text-white tracking-tight break-words">
             Contact the Episcopal Office
           </h1>
-          <p className="text-zinc-300 text-lg sm:text-xl leading-relaxed">
+          <p className="text-zinc-300 text-sm sm:text-lg lg:text-xl leading-relaxed">
             Reach out to the pastoral secretariat of the Anglican Diocese of Nnewi for episcopal audiences, synod invitations, prayer support, or official correspondence.
           </p>
         </div>
 
         {/* Contact Info Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-8">
           {/* WhatsApp Direct Desk */}
-          <div className="rounded-[36px] luxury-glass-interactive p-8 sm:p-10 flex flex-col justify-between space-y-6 shadow-2xl transition group">
-            <div className="space-y-4">
-              <div className="w-14 h-14 rounded-2xl bg-emerald-950/60 text-emerald-400 border border-emerald-500/30 flex items-center justify-center">
-                <MessageCircle className="w-7 h-7" />
+          <div className="rounded-[28px] sm:rounded-[36px] luxury-glass-interactive p-6 sm:p-10 flex flex-col justify-between space-y-4 sm:space-y-6 shadow-2xl transition group">
+            <div className="space-y-3 sm:space-y-4">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-emerald-950/60 text-emerald-400 border border-emerald-500/30 flex items-center justify-center">
+                <MessageCircle className="w-6 h-6 sm:w-7 sm:h-7" />
               </div>
-              <h3 className="font-display text-2xl font-bold text-white">Direct WhatsApp Desk</h3>
-              <p className="text-sm sm:text-base text-zinc-300 leading-relaxed">
+              <h3 className="font-display text-xl sm:text-2xl font-bold text-white">Direct WhatsApp Desk</h3>
+              <p className="text-xs sm:text-base text-zinc-300 leading-relaxed">
                 The fastest way to reach the Bishopscourt administrative secretary for prompt confirmation or urgent diocesan correspondence.
               </p>
             </div>
@@ -69,45 +69,45 @@ export default function ContactPage() {
               href={`https://wa.me/${PASTOR_PROFILE.whatsappNumber}?text=Good%20day,%20I%20am%20reaching%20out%20to%20the%20Diocesan%20Secretariat%20of%20Bishop%20Ndubuisi%20Obi.`}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full text-center py-4 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm sm:text-base transition shadow-lg shadow-emerald-950/40"
+              className="w-full text-center py-3.5 sm:py-4 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-base transition shadow-lg shadow-emerald-950/40"
             >
               Open WhatsApp Chat
             </a>
           </div>
 
           {/* Bishopscourt Helpline */}
-          <div className="rounded-[36px] luxury-glass-interactive p-8 sm:p-10 flex flex-col justify-between space-y-6 shadow-2xl transition group">
-            <div className="space-y-4">
-              <div className="w-14 h-14 rounded-2xl bg-[#18181B] text-[#FF5500] border border-[#27272A] flex items-center justify-center">
-                <Phone className="w-7 h-7" />
+          <div className="rounded-[28px] sm:rounded-[36px] luxury-glass-interactive p-6 sm:p-10 flex flex-col justify-between space-y-4 sm:space-y-6 shadow-2xl transition group">
+            <div className="space-y-3 sm:space-y-4">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-[#18181B] text-[#FF5500] border border-[#27272A] flex items-center justify-center">
+                <Phone className="w-6 h-6 sm:w-7 sm:h-7" />
               </div>
-              <h3 className="font-display text-2xl font-bold text-white">Bishopscourt Phone Line</h3>
-              <p className="text-sm sm:text-base text-zinc-300 leading-relaxed">
+              <h3 className="font-display text-xl sm:text-2xl font-bold text-white">Bishopscourt Phone Line</h3>
+              <p className="text-xs sm:text-base text-zinc-300 leading-relaxed">
                 Call the diocesan secretariat during official registry hours (Monday to Friday, 9:00 AM – 4:00 PM).
               </p>
             </div>
             <a
               href={`tel:${PASTOR_PROFILE.phone}`}
-              className="w-full text-center py-4 rounded-full bg-[#1E1E22] hover:bg-[#27272A] text-zinc-200 font-bold text-sm sm:text-base border border-[#2E2E33] transition"
+              className="w-full text-center py-3.5 sm:py-4 rounded-full bg-[#1E1E22] hover:bg-[#27272A] text-zinc-200 font-bold text-xs sm:text-base border border-[#2E2E33] transition"
             >
               {PASTOR_PROFILE.phone}
             </a>
           </div>
 
           {/* Physical Church Location */}
-          <div className="rounded-[36px] luxury-glass-interactive p-8 sm:p-10 flex flex-col justify-between space-y-6 shadow-2xl transition group">
-            <div className="space-y-4">
-              <div className="w-14 h-14 rounded-2xl bg-[#18181B] text-[#FF7828] border border-[#27272A] flex items-center justify-center">
-                <MapPin className="w-7 h-7" />
+          <div className="rounded-[28px] sm:rounded-[36px] luxury-glass-interactive p-6 sm:p-10 flex flex-col justify-between space-y-4 sm:space-y-6 shadow-2xl transition group">
+            <div className="space-y-3 sm:space-y-4">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-[#18181B] text-[#FF7828] border border-[#27272A] flex items-center justify-center">
+                <MapPin className="w-6 h-6 sm:w-7 sm:h-7" />
               </div>
-              <h3 className="font-display text-2xl font-bold text-white">Diocesan Headquarters</h3>
-              <p className="text-sm sm:text-base text-zinc-300 leading-relaxed">
+              <h3 className="font-display text-xl sm:text-2xl font-bold text-white">Diocesan Headquarters</h3>
+              <p className="text-xs sm:text-base text-zinc-300 leading-relaxed">
                 {PASTOR_PROFILE.officeAddress}
               </p>
             </div>
             <Link
               href="/book?tab=counseling"
-              className="w-full text-center py-4 rounded-full bg-[#FF5500] hover:bg-[#E64D00] text-white font-bold text-sm sm:text-base transition shadow-lg shadow-[#FF5500]/25"
+              className="w-full text-center py-3.5 sm:py-4 rounded-full bg-[#FF5500] hover:bg-[#E64D00] text-white font-bold text-xs sm:text-base transition shadow-lg shadow-[#FF5500]/25"
             >
               Book In-Person Audience
             </Link>

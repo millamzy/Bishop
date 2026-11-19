@@ -38,22 +38,22 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 bg-[#0D0D0E]/90 backdrop-blur-2xl border-b border-white/[0.08] shadow-[0_4px_30px_rgba(0,0,0,0.6)] text-white">
-      {/* Sleek Top Utility Bar with Bigger Captions */}
-      <div className="bg-[#080809] px-4 sm:px-6 lg:px-10 py-2.5 text-xs sm:text-sm text-zinc-400 border-b border-white/[0.04]">
-        <div className="max-w-[1536px] mx-auto flex items-center justify-between">
+      {/* Sleek Top Utility Bar with Responsive Fluid Layout */}
+      <div className="bg-[#080809] px-3.5 sm:px-6 lg:px-10 py-2 sm:py-2.5 text-xs sm:text-sm text-zinc-400 border-b border-white/[0.04]">
+        <div className="max-w-[1536px] mx-auto flex items-center justify-between gap-2">
           {/* Left: Audience Days */}
-          <div className="flex items-center gap-3">
-            <span className="relative flex h-2.5 w-2.5">
+          <div className="flex items-center gap-2.5 min-w-0">
+            <span className="relative flex h-2.5 w-2.5 shrink-0">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FF5500] opacity-75" />
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#FF5500]" />
             </span>
-            <span className="text-zinc-300 font-medium text-xs sm:text-sm">
+            <span className="text-zinc-300 font-medium text-[11px] sm:text-sm truncate">
               Bishopscourt Audiences: <strong className="text-white font-bold">{PASTOR_PROFILE.counselingDays}</strong>
             </span>
           </div>
 
           {/* Right: Quick Channel & WhatsApp Links */}
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-4 sm:gap-6 shrink-0">
             <a
               href={BISHOP_YOUTUBE_CHANNEL}
               target="_blank"
@@ -68,20 +68,22 @@ export default function Navbar() {
               href={`https://wa.me/${PASTOR_PROFILE.whatsappNumber}?text=Good%20day,%20I%20am%20contacting%20the%20Diocesan%20Secretariat%20of%20Bishop%20Ndubuisi%20Obi.`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-zinc-300 hover:text-white transition font-medium text-xs sm:text-sm"
+              className="text-zinc-300 hover:text-white transition font-medium text-[11px] sm:text-sm flex items-center gap-1.5"
             >
-              Registry Desk: <span className="text-white font-bold">{PASTOR_PROFILE.phone}</span>
+              <Phone className="w-3.5 h-3.5 text-[#FF5500] sm:hidden" />
+              <span className="hidden min-[380px]:inline">Registry: </span>
+              <span className="text-white font-bold">{PASTOR_PROFILE.phone}</span>
             </a>
           </div>
         </div>
       </div>
 
       {/* Main Navbar */}
-      <nav className="max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-10 h-24 flex items-center justify-between gap-6">
+      <nav className="max-w-[1536px] mx-auto px-3.5 sm:px-6 lg:px-10 h-20 sm:h-24 flex items-center justify-between gap-3 sm:gap-6">
         {/* Left: Brand / Episcopal Seal */}
-        <Link href="/" className="flex items-center gap-4 group shrink-0">
-          <div className="relative">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden border-2 border-[#FF5500] shadow-[0_0_20px_rgba(255,85,0,0.35)] shrink-0 bg-black p-0.5">
+        <Link href="/" className="flex items-center gap-3 sm:gap-4 group min-w-0 shrink">
+          <div className="relative shrink-0">
+            <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-full overflow-hidden border-2 border-[#FF5500] shadow-[0_0_20px_rgba(255,85,0,0.35)] bg-black p-0.5">
               <img
                 src={PASTOR_PROFILE.photoUrl}
                 alt={PASTOR_PROFILE.name}
@@ -89,15 +91,15 @@ export default function Navbar() {
               />
             </div>
             <span
-              className="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-emerald-500 border-2 border-[#0D0D0E]"
+              className="absolute bottom-0 right-0 w-3 h-3 sm:w-3.5 sm:h-3.5 rounded-full bg-emerald-500 border-2 border-[#0D0D0E]"
               title="Diocesan Office Active"
             />
           </div>
-          <div>
-            <span className="block font-display text-base sm:text-lg font-bold tracking-tight text-white group-hover:text-[#FFAA40] transition-colors leading-snug">
+          <div className="min-w-0">
+            <span className="block font-display text-sm min-[390px]:text-base sm:text-lg font-bold tracking-tight text-white group-hover:text-[#FFAA40] transition-colors leading-snug truncate max-w-[170px] min-[390px]:max-w-[240px] sm:max-w-none">
               Rt. Rev. Ndubuisi C. O. Obi
             </span>
-            <span className="block text-xs sm:text-sm text-[#FF7828] font-bold tracking-wide">
+            <span className="block text-[10px] min-[390px]:text-xs sm:text-sm text-[#FF7828] font-bold tracking-wide truncate max-w-[170px] min-[390px]:max-w-[240px] sm:max-w-none">
               Bishop of Nnewi • Anglican Communion
             </span>
           </div>
@@ -158,33 +160,33 @@ export default function Navbar() {
         </div>
 
         {/* Mobile menu controls */}
-        <div className="flex items-center gap-2.5 lg:hidden">
+        <div className="flex items-center gap-2 shrink-0 lg:hidden">
           <Link
             href="/book"
-            className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#FF5500] text-white text-xs sm:text-sm font-bold shadow-md shadow-[#FF5500]/25"
+            className="flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-[#FF5500] text-white text-xs sm:text-sm font-bold shadow-md shadow-[#FF5500]/25 active:scale-95 transition"
           >
             <span>Book</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </Link>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2.5 rounded-xl text-zinc-300 hover:text-white hover:bg-white/[0.08] border border-white/[0.08] transition"
+            className="p-2.5 rounded-xl text-zinc-300 hover:text-white hover:bg-white/[0.08] border border-white/[0.08] transition active:scale-95"
             aria-label="Toggle navigation menu"
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6 text-white" />}
+            {mobileMenuOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6 text-white" />}
           </button>
         </div>
       </nav>
 
-      {/* Mobile Drawer */}
+      {/* Mobile Drawer with Smooth Scrolling & Full Touch Targets */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-white/[0.08] bg-[#0D0D0E]/95 backdrop-blur-2xl px-5 pt-4 pb-8 space-y-2">
+        <div className="lg:hidden border-t border-white/[0.08] bg-[#0D0D0E]/98 backdrop-blur-3xl px-4 sm:px-6 pt-4 pb-8 space-y-2 max-h-[calc(100dvh-5.5rem)] overflow-y-auto overscroll-contain shadow-2xl">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
-              className={`block px-5 py-3.5 rounded-2xl text-base font-semibold transition ${isActive(link.href)
+              className={`block px-5 py-3.5 rounded-2xl text-base font-semibold transition active:scale-[0.98] ${isActive(link.href)
                 ? 'bg-[#FF5500] text-white font-bold shadow-lg shadow-[#FF5500]/25'
                 : 'text-zinc-300 hover:bg-white/[0.05] hover:text-white'
                 }`}
