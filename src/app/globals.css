@@ -4,8 +4,11 @@
   --background: #0d0d0e;
   --foreground: #f4f4f5;
   --sunset-orange: #ff5500;
+  --sunset-orange-bright: #ff7828;
+  --sunset-gold: #ffaa40;
   --surface-dark: #141416;
-  --surface-dark-border: #232326;
+  --surface-dark-card: #121215;
+  --surface-dark-border: rgba(255, 255, 255, 0.08);
   --muted-text: #9ca3af;
 }
 
@@ -29,6 +32,49 @@ body {
 h1, h2, h3, h4, .font-display {
   font-family: var(--font-display);
   letter-spacing: -0.025em;
+}
+
+/* Luxury Card Glass Effect */
+.luxury-glass {
+  background: rgba(18, 18, 22, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
+}
+
+.luxury-glass-interactive {
+  background: rgba(18, 18, 22, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.06);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.luxury-glass-interactive:hover {
+  border-color: rgba(255, 85, 0, 0.4);
+  box-shadow: 0 25px 60px rgba(255, 85, 0, 0.08), inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Subtle Shimmer Animation */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.animate-shimmer {
+  animation: shimmer 2.5s infinite;
+}
+
+/* Ambient Radial Glow Background */
+.ambient-glow-orange {
+  background: radial-gradient(circle at 50% 0%, rgba(255, 85, 0, 0.18), transparent 70%);
+}
+
+.ambient-glow-center {
+  background: radial-gradient(circle at 50% 50%, rgba(255, 85, 0, 0.12), transparent 70%);
 }
 
 /* Custom dark orange scrollbar */
