@@ -62,43 +62,47 @@ export default function HeroSection() {
                 </p>
               </div>
 
-              {/* Action Buttons / CTAs (Responsive: Stack on Mobile, Row on Desktop) */}
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-5 pt-2 sm:pt-4 w-full sm:w-auto">
-                {/* White Pill with Orange Arrow */}
-                <Link
-                  href="/book?tab=counseling"
-                  className="group flex items-center justify-between sm:justify-start gap-3 sm:gap-4 pl-5 sm:pl-8 pr-2.5 sm:pr-3.5 py-3.5 sm:py-5 rounded-full bg-white hover:bg-zinc-100 text-zinc-950 font-extrabold text-xs min-[400px]:text-sm sm:text-lg shadow-[0_15px_45px_rgba(255,255,255,0.25)] hover:shadow-[0_20px_55px_rgba(255,85,0,0.4)] transition-all duration-300 active:scale-95 whitespace-nowrap"
-                >
-                  <span className="whitespace-nowrap">Book Pastoral Audience</span>
-                  <span className="w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-[#FF5500] group-hover:bg-[#E64D00] text-white flex items-center justify-center transition-transform group-hover:translate-x-1.5 shadow-lg shadow-[#FF5500]/40 shrink-0">
-                    <ArrowRight className="w-4 h-4 sm:w-6 sm:h-6" />
-                  </span>
-                </Link>
+              {/* Action Buttons / CTAs */}
+              <div className="space-y-3.5 sm:space-y-4 pt-2 sm:pt-4 w-full sm:w-auto">
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto">
+                  {/* White Pill with Orange Arrow */}
+                  <Link
+                    href="/book?tab=counseling"
+                    className="group flex items-center justify-between sm:justify-start gap-3 sm:gap-4 pl-5 sm:pl-8 pr-2.5 sm:pr-3.5 py-3.5 sm:py-5 rounded-full bg-white hover:bg-zinc-100 text-zinc-950 font-extrabold text-xs min-[400px]:text-sm sm:text-lg shadow-[0_15px_45px_rgba(255,255,255,0.25)] hover:shadow-[0_20px_55px_rgba(255,85,0,0.4)] transition-all duration-300 active:scale-95 whitespace-nowrap"
+                  >
+                    <span className="whitespace-nowrap">Book Pastoral Audience</span>
+                    <span className="w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-[#FF5500] group-hover:bg-[#E64D00] text-white flex items-center justify-center transition-transform group-hover:translate-x-1.5 shadow-lg shadow-[#FF5500]/40 shrink-0">
+                      <ArrowRight className="w-4 h-4 sm:w-6 sm:h-6" />
+                    </span>
+                  </Link>
 
-                {/* Sunset Orange Pill */}
-                <Link
-                  href="/messages"
-                  className="flex items-center justify-center gap-2 sm:gap-3 px-5 sm:px-9 py-3.5 sm:py-5 rounded-full bg-[#FF5500] hover:bg-[#E64D00] text-white font-extrabold text-xs min-[400px]:text-sm sm:text-lg shadow-[0_15px_40px_rgba(255,85,0,0.45)] transition-all duration-300 active:scale-95 border border-white/25 whitespace-nowrap"
-                >
-                  <Headphones className="w-4 h-4 sm:w-6 sm:h-6 shrink-0" />
-                  <span className="whitespace-nowrap">Audio Sermons</span>
-                </Link>
+                  {/* Sunset Orange Pill */}
+                  <Link
+                    href="/messages"
+                    className="flex items-center justify-center gap-2 sm:gap-3 px-5 sm:px-9 py-3.5 sm:py-5 rounded-full bg-[#FF5500] hover:bg-[#E64D00] text-white font-extrabold text-xs min-[400px]:text-sm sm:text-lg shadow-[0_15px_40px_rgba(255,85,0,0.45)] transition-all duration-300 active:scale-95 border border-white/25 whitespace-nowrap"
+                  >
+                    <Headphones className="w-4 h-4 sm:w-6 sm:h-6 shrink-0" />
+                    <span className="whitespace-nowrap">Audio Sermons</span>
+                  </Link>
+                </div>
 
-                {/* Dark Glass Pill for YouTube */}
-                <a
-                  href={BISHOP_YOUTUBE_CHANNEL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2.5 px-5 sm:px-8 py-3.5 sm:py-5 rounded-full bg-white/[0.08] hover:bg-white/[0.14] text-white font-bold text-xs min-[400px]:text-sm sm:text-lg border border-white/[0.16] backdrop-blur-2xl transition-all duration-300 active:scale-95 shadow-md group whitespace-nowrap"
-                >
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#FF5500] group-hover:animate-ping shrink-0" />
-                  <span className="whitespace-nowrap">YouTube Channel</span>
-                </a>
+                {/* Dark Glass Pill for YouTube - Pushed Down to Prevent Touching the Frame */}
+                <div className="pt-1 sm:pt-2">
+                  <a
+                    href={BISHOP_YOUTUBE_CHANNEL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2.5 px-5 sm:px-8 py-3.5 sm:py-4.5 rounded-full bg-white/[0.08] hover:bg-white/[0.14] text-white font-bold text-xs min-[400px]:text-sm sm:text-base border border-white/[0.16] backdrop-blur-2xl transition-all duration-300 active:scale-95 shadow-md group whitespace-nowrap"
+                  >
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#FF5500] group-hover:animate-ping shrink-0" />
+                    <span className="whitespace-nowrap">YouTube Channel</span>
+                  </a>
+                </div>
               </div>
             </div>
 
             {/* Right Column: Bishop Portrait in Grand Luxury Frame */}
-            <div className="lg:col-span-5 flex justify-center">
+            <div className="lg:col-span-5 flex justify-center lg:justify-end">
               <div className="relative w-full max-w-[280px] min-[400px]:max-w-xs sm:max-w-md lg:max-w-xl mx-auto">
                 {/* Glowing Halo behind portrait */}
                 <div className="absolute -inset-4 sm:-inset-6 bg-gradient-to-tr from-[#FF5500]/35 via-[#FF7828]/20 to-transparent rounded-[40px] sm:rounded-[52px] blur-3xl pointer-events-none" />
