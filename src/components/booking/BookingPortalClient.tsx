@@ -286,33 +286,33 @@ END:VCALENDAR`;
               href={`https://wa.me/${PASTOR_PROFILE.whatsappNumber}?text=Peace%20be%20unto%20you,%20I%20have%20submitted%20request%20reference%20${submittedBooking.referenceId}%20for%20${submittedBooking.type}.`}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full flex items-center justify-center gap-2 py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs transition shadow-lg shadow-emerald-950/40"
+              className="w-full flex items-center justify-center gap-2 py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs transition shadow-lg shadow-emerald-950/40 whitespace-nowrap"
             >
-              <MessageCircle className="w-4 h-4" />
-              <span>Notify Diocesan Office on WhatsApp Now</span>
+              <MessageCircle className="w-4 h-4 shrink-0" />
+              <span className="whitespace-nowrap">Notify Diocesan Office on WhatsApp Now</span>
             </a>
 
             <div className="flex flex-col sm:flex-row gap-3">
               <button
                 onClick={() => downloadCalendarEvent(submittedBooking)}
-                className="flex-1 py-3 rounded-full bg-[#1E1E22] hover:bg-[#27272A] text-zinc-200 text-xs font-bold border border-[#2E2E33] transition"
+                className="flex-1 py-3 rounded-full bg-[#1E1E22] hover:bg-[#27272A] text-zinc-200 text-xs font-bold border border-[#2E2E33] transition whitespace-nowrap"
               >
-                Add to Calendar (.ics)
+                <span className="whitespace-nowrap">Add to Calendar (.ics)</span>
               </button>
 
               <Link
                 href={`/bookings/track?ref=${submittedBooking.referenceId}`}
-                className="flex-1 text-center py-3 rounded-full bg-[#FF5500] hover:bg-[#E64D00] text-white text-xs font-bold transition shadow-md shadow-[#FF5500]/20"
+                className="flex-1 text-center py-3 rounded-full bg-[#FF5500] hover:bg-[#E64D00] text-white text-xs font-bold transition shadow-md shadow-[#FF5500]/20 whitespace-nowrap"
               >
-                Live Status Tracker
+                <span className="whitespace-nowrap">Live Status Tracker</span>
               </Link>
             </div>
 
             <button
               onClick={() => setSubmittedBooking(null)}
-              className="w-full text-center text-xs text-zinc-500 hover:text-white pt-2 font-medium transition"
+              className="w-full text-center text-xs text-zinc-500 hover:text-white pt-2 font-medium transition whitespace-nowrap"
             >
-              ← Submit Another Request
+              <span className="whitespace-nowrap">← Submit Another Request</span>
             </button>
           </div>
         </div>
@@ -323,24 +323,24 @@ END:VCALENDAR`;
           <div className="grid grid-cols-1 min-[480px]:grid-cols-2 border-b border-[#232326] bg-[#0D0D0E]/60 p-2 sm:p-2.5 gap-2">
             <button
               onClick={() => setActiveTab('counseling')}
-              className={`flex items-center justify-center gap-2 py-3 px-3 sm:py-3.5 sm:px-4 rounded-full text-xs sm:text-sm font-bold transition active:scale-95 ${activeTab === 'counseling'
+              className={`flex items-center justify-center gap-2 py-3 px-3 sm:py-3.5 sm:px-4 rounded-full text-xs sm:text-sm font-bold transition active:scale-95 whitespace-nowrap ${activeTab === 'counseling'
                 ? 'bg-[#FF5500] text-white shadow-lg shadow-[#FF5500]/20'
                 : 'text-zinc-400 hover:text-white hover:bg-[#1A1A1E]'
                 }`}
             >
               <UserCheck className="w-4 h-4 shrink-0" />
-              <span>1. Pastoral Audience (1-on-1)</span>
+              <span className="whitespace-nowrap">1. Pastoral Audience (1-on-1)</span>
             </button>
 
             <button
               onClick={() => setActiveTab('invitation')}
-              className={`flex items-center justify-center gap-2 py-3 px-3 sm:py-3.5 sm:px-4 rounded-full text-xs sm:text-sm font-bold transition active:scale-95 ${activeTab === 'invitation'
+              className={`flex items-center justify-center gap-2 py-3 px-3 sm:py-3.5 sm:px-4 rounded-full text-xs sm:text-sm font-bold transition active:scale-95 whitespace-nowrap ${activeTab === 'invitation'
                 ? 'bg-[#FF5500] text-white shadow-lg shadow-[#FF5500]/20'
                 : 'text-zinc-400 hover:text-white hover:bg-[#1A1A1E]'
                 }`}
             >
               <Send className="w-4 h-4 shrink-0" />
-              <span>2. Speaking &amp; Event Invitation</span>
+              <span className="whitespace-nowrap">2. Speaking &amp; Event Invitation</span>
             </button>
           </div>
 
@@ -525,10 +525,10 @@ END:VCALENDAR`;
 
                 <button
                   type="submit"
-                  className="w-full py-4 rounded-full bg-[#FF5500] hover:bg-[#E64D00] text-white font-bold text-sm shadow-lg shadow-[#FF5500]/25 transition active:scale-[0.98] flex items-center justify-center gap-2"
+                  className="w-full py-4 rounded-full bg-[#FF5500] hover:bg-[#E64D00] text-white font-bold text-sm shadow-lg shadow-[#FF5500]/25 transition active:scale-[0.98] flex items-center justify-center gap-2 whitespace-nowrap"
                 >
-                  <CalendarIcon className="w-4 h-4" />
-                  <span>Reserve Pastoral Appointment</span>
+                  <CalendarIcon className="w-4 h-4 shrink-0" />
+                  <span className="whitespace-nowrap">Reserve Pastoral Appointment</span>
                 </button>
               </form>
             )}
@@ -789,10 +789,10 @@ END:VCALENDAR`;
 
                 <button
                   type="submit"
-                  className="w-full py-4 rounded-full bg-[#FF5500] hover:bg-[#E64D00] text-white font-bold text-sm shadow-lg shadow-[#FF5500]/25 transition active:scale-[0.98] flex items-center justify-center gap-2"
+                  className="w-full py-4 rounded-full bg-[#FF5500] hover:bg-[#E64D00] text-white font-bold text-sm shadow-lg shadow-[#FF5500]/25 transition active:scale-[0.98] flex items-center justify-center gap-2 whitespace-nowrap"
                 >
-                  <Send className="w-4 h-4" />
-                  <span>Submit Diocesan Speaking Request</span>
+                  <Send className="w-4 h-4 shrink-0" />
+                  <span className="whitespace-nowrap">Submit Diocesan Speaking Request</span>
                 </button>
               </form>
             )}

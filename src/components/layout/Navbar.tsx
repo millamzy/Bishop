@@ -68,11 +68,11 @@ export default function Navbar() {
               href={`https://wa.me/${PASTOR_PROFILE.whatsappNumber}?text=Good%20day,%20I%20am%20contacting%20the%20Diocesan%20Secretariat%20of%20Bishop%20Ndubuisi%20Obi.`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-zinc-300 hover:text-white transition font-medium text-[11px] sm:text-sm flex items-center gap-1.5"
+              className="text-zinc-300 hover:text-white transition font-medium text-[11px] sm:text-sm flex items-center gap-1.5 whitespace-nowrap shrink-0"
             >
               <Phone className="w-3.5 h-3.5 text-[#FF5500] sm:hidden" />
-              <span className="hidden min-[380px]:inline">Registry: </span>
-              <span className="text-white font-bold">{PASTOR_PROFILE.phone}</span>
+              <span className="hidden min-[380px]:inline whitespace-nowrap">Registry: </span>
+              <span className="text-white font-bold whitespace-nowrap">{PASTOR_PROFILE.phone}</span>
             </a>
           </div>
         </div>
@@ -131,28 +131,28 @@ export default function Navbar() {
             href={BISHOP_YOUTUBE_CHANNEL}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-[#161619] hover:bg-[#202026] text-zinc-200 hover:text-white border border-white/[0.08] hover:border-[#FF5500]/40 transition shadow-sm group"
+            className="flex items-center gap-2 px-4 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-[#161619] hover:bg-[#202026] text-zinc-200 hover:text-white border border-white/[0.08] hover:border-[#FF5500]/40 transition shadow-sm group whitespace-nowrap"
             title="Watch Bishop Ndubuisi Obi on YouTube"
           >
-            <span className="w-2.5 h-2.5 rounded-full bg-[#FF5500] group-hover:animate-ping" />
-            <span>Broadcasts</span>
+            <span className="w-2.5 h-2.5 rounded-full bg-[#FF5500] group-hover:animate-ping shrink-0" />
+            <span className="whitespace-nowrap">Broadcasts</span>
           </a>
 
           {/* Signature Pill Button with Sunset Orange Arrow Circle */}
           <Link
             href="/book"
-            className="group flex items-center gap-3 pl-6 pr-2.5 py-2.5 rounded-full bg-white hover:bg-zinc-100 text-zinc-950 font-bold text-sm sm:text-base shadow-[0_12px_30px_rgba(255,255,255,0.18)] hover:shadow-[0_15px_35px_rgba(255,85,0,0.3)] transition-all duration-300 active:scale-95"
+            className="group flex items-center gap-3 pl-5 sm:pl-6 pr-2 sm:pr-2.5 py-2.5 rounded-full bg-white hover:bg-zinc-100 text-zinc-950 font-bold text-xs sm:text-base shadow-[0_12px_30px_rgba(255,255,255,0.18)] hover:shadow-[0_15px_35px_rgba(255,85,0,0.3)] transition-all duration-300 active:scale-95 whitespace-nowrap"
           >
-            <span>Book / Invite</span>
-            <span className="w-8 h-8 rounded-full bg-[#FF5500] group-hover:bg-[#E64D00] text-white flex items-center justify-center transition-transform group-hover:translate-x-1 shadow-md shadow-[#FF5500]/30">
-              <ArrowRight className="w-4 h-4" />
+            <span className="whitespace-nowrap">Book / Invite</span>
+            <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#FF5500] group-hover:bg-[#E64D00] text-white flex items-center justify-center transition-transform group-hover:translate-x-1 shadow-md shadow-[#FF5500]/30 shrink-0">
+              <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             </span>
           </Link>
 
           {/* Diocesan Staff Portal shortcut */}
           <Link
             href="/admin"
-            className="p-3 rounded-full text-zinc-400 hover:text-white hover:bg-white/[0.08] border border-white/[0.08] transition shadow-sm"
+            className="p-3 rounded-full text-zinc-400 hover:text-white hover:bg-white/[0.08] border border-white/[0.08] transition shadow-sm shrink-0"
             title="Diocesan Secretariat Staff Portal"
           >
             <Shield className="w-5 h-5 text-[#FF5500]" />
@@ -163,14 +163,14 @@ export default function Navbar() {
         <div className="flex items-center gap-2 shrink-0 lg:hidden">
           <Link
             href="/book"
-            className="flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-[#FF5500] text-white text-xs sm:text-sm font-bold shadow-md shadow-[#FF5500]/25 active:scale-95 transition"
+            className="flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-[#FF5500] text-white text-xs sm:text-sm font-bold shadow-md shadow-[#FF5500]/25 active:scale-95 transition whitespace-nowrap"
           >
-            <span>Book</span>
-            <ArrowRight className="w-3.5 h-3.5" />
+            <span className="whitespace-nowrap">Book</span>
+            <ArrowRight className="w-3.5 h-3.5 shrink-0" />
           </Link>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2.5 rounded-xl text-zinc-300 hover:text-white hover:bg-white/[0.08] border border-white/[0.08] transition active:scale-95"
+            className="p-2.5 rounded-xl text-zinc-300 hover:text-white hover:bg-white/[0.08] border border-white/[0.08] transition active:scale-95 shrink-0"
             aria-label="Toggle navigation menu"
           >
             {mobileMenuOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6 text-white" />}
@@ -200,25 +200,25 @@ export default function Navbar() {
               href={BISHOP_YOUTUBE_CHANNEL}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between px-5 py-3.5 rounded-2xl bg-[#141416] border border-white/[0.08] text-white text-sm font-semibold"
+              className="flex items-center justify-between px-5 py-3.5 rounded-2xl bg-[#141416] border border-white/[0.08] text-white text-sm font-semibold whitespace-nowrap"
             >
-              <span className="flex items-center gap-2.5">
-                <Video className="w-4 h-4 text-[#FF5500]" />
-                <span>YouTube: @bishopndubuisiobi6348</span>
+              <span className="flex items-center gap-2.5 whitespace-nowrap">
+                <Video className="w-4 h-4 text-[#FF5500] shrink-0" />
+                <span className="whitespace-nowrap">YouTube: @bishopndubuisiobi6348</span>
               </span>
-              <span className="text-[#FFAA40] font-bold">Watch →</span>
+              <span className="text-[#FFAA40] font-bold shrink-0">Watch →</span>
             </a>
 
             <Link
               href="/admin"
               onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center justify-between px-5 py-3.5 rounded-2xl bg-[#141416] border border-white/[0.08] text-white text-sm font-semibold"
+              className="flex items-center justify-between px-5 py-3.5 rounded-2xl bg-[#141416] border border-white/[0.08] text-white text-sm font-semibold whitespace-nowrap"
             >
-              <span className="flex items-center gap-2.5">
-                <Shield className="w-4 h-4 text-[#FF5500]" />
-                <span>Secretariat Staff Portal</span>
+              <span className="flex items-center gap-2.5 whitespace-nowrap">
+                <Shield className="w-4 h-4 text-[#FF5500] shrink-0" />
+                <span className="whitespace-nowrap">Secretariat Staff Portal</span>
               </span>
-              <span className="text-xs bg-[#FF5500]/20 text-[#FFAA40] px-2.5 py-0.5 rounded-full font-bold">
+              <span className="text-xs bg-[#FF5500]/20 text-[#FFAA40] px-2.5 py-0.5 rounded-full font-bold shrink-0">
                 Staff
               </span>
             </Link>
@@ -227,10 +227,10 @@ export default function Navbar() {
               href={`https://wa.me/${PASTOR_PROFILE.whatsappNumber}?text=Good%20day,%20I%20am%20contacting%20the%20Diocesan%20Secretariat%20of%20Bishop%20Ndubuisi%20Obi.`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2.5 px-5 py-4 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-bold transition shadow-lg shadow-emerald-950/40"
+              className="flex items-center justify-center gap-2.5 px-5 py-4 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-bold transition shadow-lg shadow-emerald-950/40 whitespace-nowrap"
             >
-              <Phone className="w-4 h-4" />
-              <span>Chat on Bishopscourt WhatsApp Desk</span>
+              <Phone className="w-4 h-4 shrink-0" />
+              <span className="whitespace-nowrap">Chat on Bishopscourt WhatsApp Desk</span>
             </a>
           </div>
         </div>

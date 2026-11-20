@@ -55,13 +55,13 @@ export default function Footer() {
               href={BISHOP_YOUTUBE_CHANNEL}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between p-4 rounded-2xl bg-[#121215] hover:bg-[#18181D] border border-white/[0.08] hover:border-[#FF5500]/40 text-white text-sm font-semibold transition group shadow-sm"
+              className="flex items-center justify-between p-4 rounded-2xl bg-[#121215] hover:bg-[#18181D] border border-white/[0.08] hover:border-[#FF5500]/40 text-white text-sm font-semibold transition group shadow-sm whitespace-nowrap"
             >
-              <div className="flex items-center gap-3">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#FF5500] group-hover:animate-ping" />
-                <span>YouTube: @bishopndubuisiobi6348</span>
+              <div className="flex items-center gap-3 whitespace-nowrap">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#FF5500] group-hover:animate-ping shrink-0" />
+                <span className="whitespace-nowrap">YouTube: @bishopndubuisiobi6348</span>
               </div>
-              <ArrowRight className="w-4 h-4 text-[#FF5500] group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4 text-[#FF5500] group-hover:translate-x-1 transition-transform shrink-0" />
             </a>
 
             <div className="flex items-center gap-3 text-xs sm:text-sm text-zinc-400 bg-white/[0.03] border border-white/[0.06] rounded-2xl p-4">

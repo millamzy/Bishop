@@ -69,9 +69,9 @@ export default function ContactPage() {
               href={`https://wa.me/${PASTOR_PROFILE.whatsappNumber}?text=Good%20day,%20I%20am%20reaching%20out%20to%20the%20Diocesan%20Secretariat%20of%20Bishop%20Ndubuisi%20Obi.`}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full text-center py-3.5 sm:py-4 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-base transition shadow-lg shadow-emerald-950/40"
+              className="w-full text-center py-3.5 sm:py-4 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-base transition shadow-lg shadow-emerald-950/40 whitespace-nowrap"
             >
-              Open WhatsApp Chat
+              <span className="whitespace-nowrap">Open WhatsApp Chat</span>
             </a>
           </div>
 
@@ -88,9 +88,9 @@ export default function ContactPage() {
             </div>
             <a
               href={`tel:${PASTOR_PROFILE.phone}`}
-              className="w-full text-center py-3.5 sm:py-4 rounded-full bg-[#1E1E22] hover:bg-[#27272A] text-zinc-200 font-bold text-xs sm:text-base border border-[#2E2E33] transition"
+              className="w-full text-center py-3.5 sm:py-4 rounded-full bg-[#1E1E22] hover:bg-[#27272A] text-zinc-200 font-bold text-xs sm:text-base border border-[#2E2E33] transition whitespace-nowrap"
             >
-              {PASTOR_PROFILE.phone}
+              <span className="whitespace-nowrap">{PASTOR_PROFILE.phone}</span>
             </a>
           </div>
 
@@ -220,10 +220,10 @@ export default function ContactPage() {
 
                 <button
                   type="submit"
-                  className="w-full py-4 rounded-full bg-[#FF5500] hover:bg-[#E64D00] text-white font-bold text-xs transition shadow-lg shadow-[#FF5500]/25 flex items-center justify-center gap-2"
+                  className="w-full py-4 rounded-full bg-[#FF5500] hover:bg-[#E64D00] text-white font-bold text-xs transition shadow-lg shadow-[#FF5500]/25 flex items-center justify-center gap-2 whitespace-nowrap"
                 >
-                  <Send className="w-4 h-4 text-white" />
-                  <span>Send Message to Secretariat</span>
+                  <Send className="w-4 h-4 text-white shrink-0" />
+                  <span className="whitespace-nowrap">Send Message to Secretariat</span>
                 </button>
               </form>
             )}

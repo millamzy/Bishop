@@ -137,23 +137,23 @@ export default function MessageDetailClient({ messageId }: { messageId: string }
           <div className="flex items-center gap-2 border-b border-[#232326] pb-3 pt-2">
             <button
               onClick={() => setActiveMediaTab('video')}
-              className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold transition ${activeMediaTab === 'video'
+              className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold transition whitespace-nowrap ${activeMediaTab === 'video'
                 ? 'bg-[#FF5500] text-white shadow-md shadow-[#FF5500]/25'
                 : 'bg-[#1C1C20] text-zinc-400 hover:text-white'
                 }`}
             >
-              <span>Watch Video</span>
+              <span className="whitespace-nowrap">Watch Video</span>
             </button>
 
             <button
               onClick={() => setActiveMediaTab('audio')}
-              className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold transition ${activeMediaTab === 'audio'
+              className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold transition whitespace-nowrap ${activeMediaTab === 'audio'
                 ? 'bg-white text-zinc-950 shadow-md'
                 : 'bg-[#1C1C20] text-zinc-400 hover:text-white'
                 }`}
             >
-              <Volume2 className="w-3.5 h-3.5" />
-              <span>Listen to Audio (Low Data)</span>
+              <Volume2 className="w-3.5 h-3.5 shrink-0" />
+              <span className="whitespace-nowrap">Listen to Audio (Low Data)</span>
             </button>
           </div>
         )}
@@ -183,10 +183,10 @@ export default function MessageDetailClient({ messageId }: { messageId: string }
               <div className="flex items-center gap-2">
                 <button
                   onClick={handleShare}
-                  className="px-3.5 py-1.5 rounded-full bg-[#1C1C20] hover:bg-[#25252B] text-zinc-300 font-semibold flex items-center gap-1.5 border border-[#2E2E34] transition"
+                  className="px-3.5 py-1.5 rounded-full bg-[#1C1C20] hover:bg-[#25252B] text-zinc-300 font-semibold flex items-center gap-1.5 border border-[#2E2E34] transition whitespace-nowrap"
                 >
-                  <Share2 className="w-3.5 h-3.5" />
-                  <span>Share Video</span>
+                  <Share2 className="w-3.5 h-3.5 shrink-0" />
+                  <span className="whitespace-nowrap">Share Video</span>
                 </button>
               </div>
             </div>
@@ -224,10 +224,10 @@ export default function MessageDetailClient({ messageId }: { messageId: string }
                 <a
                   href={sermon.audioUrl}
                   download={`${sermon.slug}.mp3`}
-                  className="flex-1 sm:flex-initial flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-[#1C1C20] hover:bg-[#25252B] text-xs font-semibold text-white border border-[#2E2E34] transition"
+                  className="flex-1 sm:flex-initial flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-[#1C1C20] hover:bg-[#25252B] text-xs font-semibold text-white border border-[#2E2E34] transition whitespace-nowrap"
                 >
-                  <Download className="w-4 h-4 text-[#FF5500]" />
-                  <span>Download MP3 ({sermon.audioFileSizeMb}MB)</span>
+                  <Download className="w-4 h-4 text-[#FF5500] shrink-0" />
+                  <span className="whitespace-nowrap">Download MP3 ({sermon.audioFileSizeMb}MB)</span>
                 </a>
               )}
 

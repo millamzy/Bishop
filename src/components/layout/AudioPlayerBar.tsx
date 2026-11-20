@@ -152,14 +152,14 @@ export default function AudioPlayerBar() {
             {/* Low Data Toggle */}
             <button
               onClick={toggleLowDataMode}
-              className={`flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-medium transition border ${lowDataMode
+              className={`flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-medium transition border whitespace-nowrap shrink-0 ${lowDataMode
                 ? 'bg-[#FF5500]/20 border-[#FF5500] text-[#FFAA40]'
                 : 'bg-white/[0.06] border-white/[0.1] text-zinc-300 hover:text-white'
                 }`}
               title="Toggle Low-Data Mode for Nigerian mobile connections"
             >
-              <Wifi className="w-4 h-4" />
-              <span className="hidden md:inline">{lowDataMode ? 'Low Data (Active)' : 'Low Data Mode'}</span>
+              <Wifi className="w-4 h-4 shrink-0" />
+              <span className="hidden md:inline whitespace-nowrap">{lowDataMode ? 'Low Data (Active)' : 'Low Data Mode'}</span>
             </button>
 
             {/* Download Button */}
@@ -167,11 +167,11 @@ export default function AudioPlayerBar() {
               <a
                 href={currentSermon.audioUrl}
                 download={`${currentSermon.slug}.mp3`}
-                className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/[0.06] hover:bg-white/[0.12] text-xs sm:text-sm font-medium text-white border border-white/[0.1] transition"
+                className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/[0.06] hover:bg-white/[0.12] text-xs sm:text-sm font-medium text-white border border-white/[0.1] transition whitespace-nowrap shrink-0"
                 title={`Download audio (${currentSermon.audioFileSizeMb || 12} MB)`}
               >
-                <Download className="w-4 h-4 text-[#FF5500]" />
-                <span className="hidden lg:inline">{currentSermon.audioFileSizeMb ? `${currentSermon.audioFileSizeMb}MB` : 'Download'}</span>
+                <Download className="w-4 h-4 text-[#FF5500] shrink-0" />
+                <span className="hidden lg:inline whitespace-nowrap">{currentSermon.audioFileSizeMb ? `${currentSermon.audioFileSizeMb}MB` : 'Download'}</span>
               </a>
             )}
 

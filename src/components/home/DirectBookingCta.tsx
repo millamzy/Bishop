@@ -57,9 +57,9 @@ export default function DirectBookingCta() {
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-5 pt-3 sm:pt-4 w-full sm:w-auto">
                 <Link
                   href="/book?tab=counseling"
-                  className="group flex items-center justify-between sm:justify-start gap-3.5 pl-6 sm:pl-8 pr-2.5 sm:pr-3.5 py-3.5 sm:py-5 rounded-full bg-white hover:bg-zinc-100 text-zinc-950 font-bold text-sm sm:text-lg shadow-[0_15px_45px_rgba(255,255,255,0.25)] hover:shadow-[0_20px_50px_rgba(255,85,0,0.4)] transition-all duration-300 active:scale-95"
+                  className="group flex items-center justify-between sm:justify-start gap-3.5 pl-5 sm:pl-8 pr-2.5 sm:pr-3.5 py-3.5 sm:py-5 rounded-full bg-white hover:bg-zinc-100 text-zinc-950 font-bold text-xs min-[400px]:text-sm sm:text-lg shadow-[0_15px_45px_rgba(255,255,255,0.25)] hover:shadow-[0_20px_50px_rgba(255,85,0,0.4)] transition-all duration-300 active:scale-95 whitespace-nowrap"
                 >
-                  <span>Book Pastoral Audience</span>
+                  <span className="whitespace-nowrap">Book Pastoral Audience</span>
                   <span className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-[#FF5500] group-hover:bg-[#E64D00] text-white flex items-center justify-center transition-transform group-hover:translate-x-1.5 shadow-md shadow-[#FF5500]/40 shrink-0">
                     <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
                   </span>
@@ -67,19 +67,19 @@ export default function DirectBookingCta() {
 
                 <Link
                   href="/book?tab=invitation"
-                  className="px-6 sm:px-8 py-3.5 sm:py-5 rounded-full bg-white/[0.08] hover:bg-white/[0.14] text-white font-bold text-sm sm:text-lg border border-white/[0.14] backdrop-blur-xl transition active:scale-95 shadow-sm text-center"
+                  className="px-5 sm:px-8 py-3.5 sm:py-5 rounded-full bg-white/[0.08] hover:bg-white/[0.14] text-white font-bold text-xs min-[400px]:text-sm sm:text-lg border border-white/[0.14] backdrop-blur-xl transition active:scale-95 shadow-sm text-center whitespace-nowrap"
                 >
-                  <span>Submit Diocesan Invitation</span>
+                  <span className="whitespace-nowrap">Submit Diocesan Invitation</span>
                 </Link>
 
                 <a
                   href={`https://wa.me/${PASTOR_PROFILE.whatsappNumber}?text=Peace%20be%20unto%20you,%20I%20am%20inquiring%20about%20the%20itinerary%20of%20Bishop%20Ndubuisi%20Obi.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 sm:px-7 py-3.5 sm:py-5 rounded-full bg-emerald-950/40 hover:bg-emerald-950/60 text-emerald-300 font-bold text-sm sm:text-lg transition flex items-center justify-center gap-2.5 sm:gap-3 border border-emerald-500/30"
+                  className="px-5 sm:px-7 py-3.5 sm:py-5 rounded-full bg-emerald-950/40 hover:bg-emerald-950/60 text-emerald-300 font-bold text-xs min-[400px]:text-sm sm:text-lg transition flex items-center justify-center gap-2.5 sm:gap-3 border border-emerald-500/30 whitespace-nowrap"
                 >
                   <MessageCircle className="w-4 h-4 sm:w-6 sm:h-6 text-emerald-400 shrink-0" />
-                  <span>WhatsApp Desk</span>
+                  <span className="whitespace-nowrap">WhatsApp Desk</span>
                 </a>
               </div>
             </div>

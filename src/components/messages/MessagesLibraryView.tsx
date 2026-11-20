@@ -150,14 +150,14 @@ export default function MessagesLibraryView() {
             {/* Low Data Mode Toggle (Nigeria Friendly) */}
             <button
               onClick={toggleLowDataMode}
-              className={`flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-4 py-2 rounded-full text-xs font-semibold transition border shrink-0 active:scale-95 ${lowDataMode
+              className={`flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-4 py-2 rounded-full text-xs font-semibold transition border shrink-0 active:scale-95 whitespace-nowrap ${lowDataMode
                 ? 'bg-[#FF5500]/20 border-[#FF5500] text-[#FF5500]'
                 : 'bg-[#1C1C20] hover:bg-[#25252B] text-zinc-300 border-[#2E2E34]'
                 }`}
               title="Optimizes streaming for slower 2G/3G Nigerian mobile networks"
             >
               <Wifi className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#FF5500] shrink-0" />
-              <span>{lowDataMode ? 'Low-Data Active' : 'Low-Data Mode'}</span>
+              <span className="whitespace-nowrap">{lowDataMode ? 'Low-Data Active' : 'Low-Data Mode'}</span>
             </button>
           </div>
         </div>
@@ -359,38 +359,38 @@ export default function MessagesLibraryView() {
                     {hasVideo ? (
                       <Link
                         href={`/messages/${msg.id}`}
-                        className="flex-1 flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-full bg-[#FF5500] hover:bg-[#E64D00] text-white font-bold text-xs shadow-md shadow-[#FF5500]/20 transition active:scale-95"
+                        className="flex-1 flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-full bg-[#FF5500] hover:bg-[#E64D00] text-white font-bold text-xs shadow-md shadow-[#FF5500]/20 transition active:scale-95 whitespace-nowrap"
                       >
-                        <Video className="w-3.5 h-3.5" />
-                        <span>Watch Video</span>
+                        <Video className="w-3.5 h-3.5 shrink-0" />
+                        <span className="whitespace-nowrap">Watch Video</span>
                       </Link>
                     ) : hasAudio ? (
                       <button
                         onClick={() => playSermon(msg)}
-                        className={`flex-1 flex items-center justify-center gap-2 py-2.5 px-3 rounded-full font-bold text-xs transition active:scale-95 shadow-md ${isCurrentPlaying
+                        className={`flex-1 flex items-center justify-center gap-2 py-2.5 px-3 rounded-full font-bold text-xs transition active:scale-95 shadow-md whitespace-nowrap ${isCurrentPlaying
                           ? 'bg-white text-zinc-950'
                           : 'bg-[#FF5500] hover:bg-[#E64D00] text-white shadow-[#FF5500]/20'
                           }`}
                       >
                         {isCurrentPlaying ? (
                           <>
-                            <Pause className="w-4 h-4 fill-current" />
-                            <span>Pause Audio</span>
+                            <Pause className="w-4 h-4 fill-current shrink-0" />
+                            <span className="whitespace-nowrap">Pause Audio</span>
                           </>
                         ) : (
                           <>
-                            <Play className="w-4 h-4 fill-current ml-0.5" />
-                            <span>Listen Audio</span>
+                            <Play className="w-4 h-4 fill-current ml-0.5 shrink-0" />
+                            <span className="whitespace-nowrap">Listen Audio</span>
                           </>
                         )}
                       </button>
                     ) : (
                       <Link
                         href={`/messages/${msg.id}`}
-                        className="flex-1 flex items-center justify-center gap-2 py-2.5 px-3 rounded-full bg-[#1C1C20] hover:bg-[#25252B] text-white font-bold text-xs border border-[#2E2E34] transition"
+                        className="flex-1 flex items-center justify-center gap-2 py-2.5 px-3 rounded-full bg-[#1C1C20] hover:bg-[#25252B] text-white font-bold text-xs border border-[#2E2E34] transition whitespace-nowrap"
                       >
-                        <BookOpen className="w-4 h-4 text-[#FF5500]" />
-                        <span>Read Teaching</span>
+                        <BookOpen className="w-4 h-4 text-[#FF5500] shrink-0" />
+                        <span className="whitespace-nowrap">Read Teaching</span>
                       </Link>
                     )}
 

@@ -51,9 +51,9 @@ export default function YouTubeVideoSection() {
               href={BISHOP_YOUTUBE_CHANNEL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 pl-6 sm:pl-7 pr-2.5 sm:pr-3 py-3 sm:py-3.5 rounded-full bg-[#FF5500] hover:bg-[#E64D00] text-white font-bold text-sm sm:text-lg shadow-[0_15px_40px_rgba(255,85,0,0.35)] transition-all active:scale-95 group w-full sm:w-auto"
+              className="inline-flex items-center justify-center gap-3 pl-5 sm:pl-7 pr-2.5 sm:pr-3 py-3 sm:py-3.5 rounded-full bg-[#FF5500] hover:bg-[#E64D00] text-white font-bold text-xs min-[400px]:text-sm sm:text-lg shadow-[0_15px_40px_rgba(255,85,0,0.35)] transition-all active:scale-95 group w-full sm:w-auto whitespace-nowrap"
             >
-              <span>Subscribe on YouTube</span>
+              <span className="whitespace-nowrap">Subscribe on YouTube</span>
               <span className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white text-zinc-950 flex items-center justify-center transition-transform group-hover:translate-x-1 shadow-md shrink-0">
                 <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               </span>

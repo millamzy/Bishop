@@ -128,9 +128,9 @@ export default function TrackBookingClient() {
           </div>
           <button
             type="submit"
-            className="px-7 py-3 rounded-full bg-[#FF5500] hover:bg-[#E64D00] text-white font-bold text-xs transition active:scale-95 shadow-lg shadow-[#FF5500]/25 shrink-0"
+            className="px-7 py-3 rounded-full bg-[#FF5500] hover:bg-[#E64D00] text-white font-bold text-xs transition active:scale-95 shadow-lg shadow-[#FF5500]/25 shrink-0 whitespace-nowrap"
           >
-            Check Status
+            <span className="whitespace-nowrap">Check Status</span>
           </button>
         </div>
       </form>

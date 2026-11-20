@@ -112,16 +112,16 @@ export default function AboutPage() {
               <div className="mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-white/[0.08] flex flex-col gap-3">
                 <Link
                   href="/book?tab=counseling"
-                  className="w-full py-3.5 sm:py-4 rounded-full bg-[#FF5500] hover:bg-[#E64D00] text-white font-bold text-xs sm:text-base shadow-lg shadow-[#FF5500]/25 transition active:scale-95 flex items-center justify-center gap-2"
+                  className="w-full py-3.5 sm:py-4 rounded-full bg-[#FF5500] hover:bg-[#E64D00] text-white font-bold text-xs sm:text-base shadow-lg shadow-[#FF5500]/25 transition active:scale-95 flex items-center justify-center gap-2 whitespace-nowrap"
                 >
-                  <span>Book Pastoral Audience</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <span className="whitespace-nowrap">Book Pastoral Audience</span>
+                  <ArrowRight className="w-4 h-4 shrink-0" />
                 </Link>
                 <Link
                   href="/book?tab=invitation"
-                  className="w-full py-3.5 sm:py-4 rounded-full bg-[#1C1C22] hover:bg-[#25252E] text-white font-bold text-xs sm:text-base border border-white/[0.1] transition active:scale-95 text-center"
+                  className="w-full py-3.5 sm:py-4 rounded-full bg-[#1C1C22] hover:bg-[#25252E] text-white font-bold text-xs sm:text-base border border-white/[0.1] transition active:scale-95 text-center whitespace-nowrap"
                 >
-                  Request Bishop for Church Invitation
+                  <span className="whitespace-nowrap">Request Bishop for Church Invitation</span>
                 </Link>
               </div>
             </div>

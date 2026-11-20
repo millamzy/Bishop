@@ -67,10 +67,10 @@ export default function HeroSection() {
                 {/* White Pill with Orange Arrow */}
                 <Link
                   href="/book?tab=counseling"
-                  className="group flex items-center justify-between sm:justify-start gap-3 sm:gap-4 pl-6 sm:pl-8 pr-2.5 sm:pr-3.5 py-3.5 sm:py-5 rounded-full bg-white hover:bg-zinc-100 text-zinc-950 font-extrabold text-sm sm:text-lg shadow-[0_15px_45px_rgba(255,255,255,0.25)] hover:shadow-[0_20px_55px_rgba(255,85,0,0.4)] transition-all duration-300 active:scale-95"
+                  className="group flex items-center justify-between sm:justify-start gap-3 sm:gap-4 pl-5 sm:pl-8 pr-2.5 sm:pr-3.5 py-3.5 sm:py-5 rounded-full bg-white hover:bg-zinc-100 text-zinc-950 font-extrabold text-xs min-[400px]:text-sm sm:text-lg shadow-[0_15px_45px_rgba(255,255,255,0.25)] hover:shadow-[0_20px_55px_rgba(255,85,0,0.4)] transition-all duration-300 active:scale-95 whitespace-nowrap"
                 >
-                  <span>Book Pastoral Audience</span>
-                  <span className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#FF5500] group-hover:bg-[#E64D00] text-white flex items-center justify-center transition-transform group-hover:translate-x-1.5 shadow-lg shadow-[#FF5500]/40 shrink-0">
+                  <span className="whitespace-nowrap">Book Pastoral Audience</span>
+                  <span className="w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-[#FF5500] group-hover:bg-[#E64D00] text-white flex items-center justify-center transition-transform group-hover:translate-x-1.5 shadow-lg shadow-[#FF5500]/40 shrink-0">
                     <ArrowRight className="w-4 h-4 sm:w-6 sm:h-6" />
                   </span>
                 </Link>
@@ -78,10 +78,10 @@ export default function HeroSection() {
                 {/* Sunset Orange Pill */}
                 <Link
                   href="/messages"
-                  className="flex items-center justify-center gap-3 px-6 sm:px-9 py-3.5 sm:py-5 rounded-full bg-[#FF5500] hover:bg-[#E64D00] text-white font-extrabold text-sm sm:text-lg shadow-[0_15px_40px_rgba(255,85,0,0.45)] transition-all duration-300 active:scale-95 border border-white/25"
+                  className="flex items-center justify-center gap-2 sm:gap-3 px-5 sm:px-9 py-3.5 sm:py-5 rounded-full bg-[#FF5500] hover:bg-[#E64D00] text-white font-extrabold text-xs min-[400px]:text-sm sm:text-lg shadow-[0_15px_40px_rgba(255,85,0,0.45)] transition-all duration-300 active:scale-95 border border-white/25 whitespace-nowrap"
                 >
                   <Headphones className="w-4 h-4 sm:w-6 sm:h-6 shrink-0" />
-                  <span>Audio Sermons</span>
+                  <span className="whitespace-nowrap">Audio Sermons</span>
                 </Link>
 
                 {/* Dark Glass Pill for YouTube */}
@@ -89,10 +89,10 @@ export default function HeroSection() {
                   href={BISHOP_YOUTUBE_CHANNEL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-5 rounded-full bg-white/[0.08] hover:bg-white/[0.14] text-white font-bold text-sm sm:text-lg border border-white/[0.16] backdrop-blur-2xl transition-all duration-300 active:scale-95 shadow-md group"
+                  className="flex items-center justify-center gap-2.5 px-5 sm:px-8 py-3.5 sm:py-5 rounded-full bg-white/[0.08] hover:bg-white/[0.14] text-white font-bold text-xs min-[400px]:text-sm sm:text-lg border border-white/[0.16] backdrop-blur-2xl transition-all duration-300 active:scale-95 shadow-md group whitespace-nowrap"
                 >
                   <span className="w-2.5 h-2.5 rounded-full bg-[#FF5500] group-hover:animate-ping shrink-0" />
-                  <span>YouTube Channel</span>
+                  <span className="whitespace-nowrap">YouTube Channel</span>
                 </a>
               </div>
             </div>

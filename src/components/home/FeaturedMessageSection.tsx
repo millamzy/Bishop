@@ -98,15 +98,15 @@ export default function FeaturedMessageSection({ sermon }: { sermon: SermonMessa
                   <a
                     href={sermon.audioUrl}
                     download={`${sermon.slug}.mp3`}
-                    className="flex-1 flex items-center justify-center gap-2 py-3 sm:py-3.5 px-4 sm:px-5 rounded-full bg-[#1A1A1E] hover:bg-[#222228] text-xs sm:text-sm font-bold text-white border border-white/[0.1] transition shadow-xs"
+                    className="flex-1 flex items-center justify-center gap-2 py-3 sm:py-3.5 px-4 sm:px-5 rounded-full bg-[#1A1A1E] hover:bg-[#222228] text-xs sm:text-sm font-bold text-white border border-white/[0.1] transition shadow-xs whitespace-nowrap"
                   >
                     <Download className="w-4 h-4 text-[#FF5500]" />
-                    <span>Download MP3</span>
+                    <span className="whitespace-nowrap">Download MP3</span>
                   </a>
                 )}
                 <button
                   onClick={handleShare}
-                  className="p-3 sm:p-3.5 rounded-full bg-[#1A1A1E] hover:bg-[#222228] text-zinc-200 border border-white/[0.1] transition shadow-xs"
+                  className="p-3 sm:p-3.5 rounded-full bg-[#1A1A1E] hover:bg-[#222228] text-zinc-200 border border-white/[0.1] transition shadow-xs whitespace-nowrap"
                   title="Share message link"
                 >
                   <Share2 className="w-4 h-4 sm:w-5 sm:h-5 text-[#FF7828]" />
@@ -153,19 +153,19 @@ export default function FeaturedMessageSection({ sermon }: { sermon: SermonMessa
               <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-5 w-full">
                 <Link
                   href={`/messages/${sermon.id}`}
-                  className="inline-flex items-center justify-center gap-2.5 sm:gap-3 px-6 sm:px-8 py-3.5 sm:py-4.5 rounded-full bg-[#FF5500] hover:bg-[#E64D00] text-white text-sm sm:text-lg font-bold transition shadow-xl shadow-[#FF5500]/30 active:scale-95 text-center"
+                  className="inline-flex items-center justify-center gap-2.5 sm:gap-3 px-5 sm:px-8 py-3.5 sm:py-4.5 rounded-full bg-[#FF5500] hover:bg-[#E64D00] text-white text-xs min-[400px]:text-sm sm:text-lg font-bold transition shadow-xl shadow-[#FF5500]/30 active:scale-95 text-center whitespace-nowrap"
                 >
                   <BookOpen className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
-                  <span>Read Full Synod Charge &amp; Study Notes</span>
+                  <span className="whitespace-nowrap">Read Full Synod Charge &amp; Study Notes</span>
                 </Link>
 
                 {sermon.youtubeVideoId && (
                   <Link
                     href={`/messages/${sermon.id}`}
-                    className="inline-flex items-center justify-center gap-2.5 sm:gap-3 px-6 sm:px-7 py-3.5 sm:py-4.5 rounded-full bg-[#18181D] hover:bg-[#202026] text-white text-sm sm:text-lg font-bold border border-white/[0.12] transition shadow-xs active:scale-95 text-center"
+                    className="inline-flex items-center justify-center gap-2.5 sm:gap-3 px-5 sm:px-7 py-3.5 sm:py-4.5 rounded-full bg-[#18181D] hover:bg-[#202026] text-white text-xs min-[400px]:text-sm sm:text-lg font-bold border border-white/[0.12] transition shadow-xs active:scale-95 text-center whitespace-nowrap"
                   >
                     <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#FF5500] shrink-0" />
-                    <span>Watch Video Broadcast</span>
+                    <span className="whitespace-nowrap">Watch Video Broadcast</span>
                   </Link>
                 )}
               </div>

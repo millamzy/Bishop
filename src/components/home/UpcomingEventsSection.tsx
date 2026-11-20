@@ -26,9 +26,9 @@ export default function UpcomingEventsSection() {
           </div>
           <Link
             href="/book?tab=invitation"
-            className="group inline-flex items-center justify-between sm:justify-start gap-3.5 pl-6 sm:pl-8 pr-2.5 sm:pr-3 py-3.5 sm:py-4 rounded-full bg-[#18181D] hover:bg-[#222228] text-white border border-white/[0.14] text-sm sm:text-lg font-bold transition shadow-xl shadow-black/50 active:scale-95 shrink-0 w-full sm:w-auto"
+            className="group inline-flex items-center justify-between sm:justify-start gap-3.5 pl-5 sm:pl-8 pr-2.5 sm:pr-3 py-3.5 sm:py-4 rounded-full bg-[#18181D] hover:bg-[#222228] text-white border border-white/[0.14] text-xs min-[400px]:text-sm sm:text-lg font-bold transition shadow-xl shadow-black/50 active:scale-95 shrink-0 w-full sm:w-auto whitespace-nowrap"
           >
-            <span>Request Bishop for Parish Event</span>
+            <span className="whitespace-nowrap">Request Bishop for Parish Event</span>
             <span className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#FF5500] group-hover:bg-[#E64D00] text-white flex items-center justify-center transition-transform group-hover:translate-x-1 shadow-md shadow-[#FF5500]/30 shrink-0">
               <ArrowRight className="w-4 h-4" />
             </span>
