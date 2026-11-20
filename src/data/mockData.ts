@@ -22,8 +22,8 @@ export const PASTOR_PROFILE: PastorProfile = {
   ],
   vision:
     'To build a spiritually vibrant, mission-driven, socially responsible, and economically self-reliant Diocese, where Christ is exalted, souls are saved, and believers are equipped for kingdom exploits.',
-  phone: '+234 803 333 4482',
-  whatsappNumber: '2348033334482',
+  phone: '08035462727',
+  whatsappNumber: '2348035462727',
   officeAddress: 'Bishopscourt, Anglican Diocese of Nnewi, P.O. Box 2630, Nnewi, Anambra State, Nigeria',
   counselingDays: 'Tuesdays & Thursdays (Episcopal Audiences: 10:00 AM – 3:00 PM)',
   socials: {

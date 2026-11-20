@@ -17,7 +17,7 @@ export default function FeaturedMessageSection({ sermon }: { sermon: SermonMessa
         title: sermon.title,
         text: `Listen to "${sermon.title}" by The Rt. Rev. Ndubuisi Obi (Bishop of Nnewi)`,
         url: window.location.origin + `/messages/${sermon.id}`
-      }).catch(() => {});
+      }).catch(() => { });
     } else {
       navigator.clipboard.writeText(window.location.origin + `/messages/${sermon.id}`);
       alert('Sermon link copied to clipboard!');
@@ -76,17 +76,15 @@ export default function FeaturedMessageSection({ sermon }: { sermon: SermonMessa
                   <span
                     key={i}
                     style={{ height: `${height}%` }}
-                    className={`w-1 sm:w-1.5 rounded-full transition-all duration-300 ${
-                      isCurrentPlaying ? 'bg-[#FF5500] animate-pulse' : 'bg-zinc-700'
-                    }`}
+                    className={`w-1 sm:w-1.5 rounded-full transition-all duration-300 ${isCurrentPlaying ? 'bg-[#FF5500] animate-pulse' : 'bg-zinc-700'
+                      }`}
                   />
                 ))}
               </div>
 
               <div className="space-y-1.5 sm:space-y-2">
-                <span className={`inline-block px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-bold tracking-wide transition ${
-                  isCurrentPlaying ? 'bg-[#FF5500] text-white shadow-md shadow-[#FF5500]/30' : 'bg-[#1C1C22] text-zinc-200 border border-white/[0.08]'
-                }`}>
+                <span className={`inline-block px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-bold tracking-wide transition ${isCurrentPlaying ? 'bg-[#FF5500] text-white shadow-md shadow-[#FF5500]/30' : 'bg-[#1C1C22] text-zinc-200 border border-white/[0.08]'
+                  }`}>
                   {isCurrentPlaying ? 'Now Streaming Audio' : 'Click to Play Audio Teaching'}
                 </span>
                 <p className="text-[11px] sm:text-sm text-zinc-400 mt-1.5 font-medium">

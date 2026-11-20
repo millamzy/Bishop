@@ -111,7 +111,7 @@ export default function MessagesLibraryView() {
         title: m.title,
         text: `Listen to "${m.title}" by The Rt. Rev. Ndubuisi Obi (Bishop of Nnewi)`,
         url
-      }).catch(() => {});
+      }).catch(() => { });
     } else {
       navigator.clipboard.writeText(url);
       alert('Sermon link copied to clipboard!');
@@ -150,11 +150,10 @@ export default function MessagesLibraryView() {
             {/* Low Data Mode Toggle (Nigeria Friendly) */}
             <button
               onClick={toggleLowDataMode}
-              className={`flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-4 py-2 rounded-full text-xs font-semibold transition border shrink-0 active:scale-95 ${
-                lowDataMode
-                  ? 'bg-[#FF5500]/20 border-[#FF5500] text-[#FF5500]'
-                  : 'bg-[#1C1C20] hover:bg-[#25252B] text-zinc-300 border-[#2E2E34]'
-              }`}
+              className={`flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-4 py-2 rounded-full text-xs font-semibold transition border shrink-0 active:scale-95 ${lowDataMode
+                ? 'bg-[#FF5500]/20 border-[#FF5500] text-[#FF5500]'
+                : 'bg-[#1C1C20] hover:bg-[#25252B] text-zinc-300 border-[#2E2E34]'
+                }`}
               title="Optimizes streaming for slower 2G/3G Nigerian mobile networks"
             >
               <Wifi className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#FF5500] shrink-0" />
@@ -368,11 +367,10 @@ export default function MessagesLibraryView() {
                     ) : hasAudio ? (
                       <button
                         onClick={() => playSermon(msg)}
-                        className={`flex-1 flex items-center justify-center gap-2 py-2.5 px-3 rounded-full font-bold text-xs transition active:scale-95 shadow-md ${
-                          isCurrentPlaying
-                            ? 'bg-white text-zinc-950'
-                            : 'bg-[#FF5500] hover:bg-[#E64D00] text-white shadow-[#FF5500]/20'
-                        }`}
+                        className={`flex-1 flex items-center justify-center gap-2 py-2.5 px-3 rounded-full font-bold text-xs transition active:scale-95 shadow-md ${isCurrentPlaying
+                          ? 'bg-white text-zinc-950'
+                          : 'bg-[#FF5500] hover:bg-[#E64D00] text-white shadow-[#FF5500]/20'
+                          }`}
                       >
                         {isCurrentPlaying ? (
                           <>
