@@ -47,8 +47,8 @@ export default function Navbar() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FF5500] opacity-75" />
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#FF5500]" />
             </span>
-            <span className="text-zinc-300 font-medium text-[11px] sm:text-sm truncate">
-              Bishopscourt Audiences: <strong className="text-white font-bold">{PASTOR_PROFILE.counselingDays}</strong>
+            <span className="text-zinc-300 font-medium text-[11px] sm:text-sm truncate whitespace-nowrap">
+              Bishopscourt Audiences: <strong className="text-white font-bold whitespace-nowrap">{PASTOR_PROFILE.counselingDays}</strong>
             </span>
           </div>
 
@@ -58,10 +58,10 @@ export default function Navbar() {
               href={BISHOP_YOUTUBE_CHANNEL}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:inline-flex items-center gap-2.5 text-zinc-200 hover:text-[#FFAA40] transition font-semibold text-xs sm:text-sm"
+              className="hidden sm:inline-flex items-center gap-2.5 text-zinc-200 hover:text-[#FFAA40] transition font-semibold text-xs sm:text-sm whitespace-nowrap shrink-0"
             >
-              <Video className="w-4 h-4 text-[#FF5500]" />
-              <span>YouTube: @bishopndubuisiobi6348</span>
+              <Video className="w-4 h-4 text-[#FF5500] shrink-0" />
+              <span className="whitespace-nowrap">YouTube: @bishopndubuisiobi6348</span>
             </a>
             <span className="hidden sm:inline text-zinc-700">•</span>
             <a
@@ -96,29 +96,29 @@ export default function Navbar() {
             />
           </div>
           <div className="min-w-0">
-            <span className="block font-display text-sm min-[390px]:text-base sm:text-lg font-bold tracking-tight text-white group-hover:text-[#FFAA40] transition-colors leading-snug truncate max-w-[170px] min-[390px]:max-w-[240px] sm:max-w-none">
+            <span className="block font-display text-sm min-[390px]:text-base sm:text-lg font-bold tracking-tight text-white group-hover:text-[#FFAA40] transition-colors leading-snug truncate max-w-[170px] min-[390px]:max-w-[240px] sm:max-w-none whitespace-nowrap">
               Rt. Rev. Ndubuisi C. O. Obi
             </span>
-            <span className="block text-[10px] min-[390px]:text-xs sm:text-sm text-[#FF7828] font-bold tracking-wide truncate max-w-[170px] min-[390px]:max-w-[240px] sm:max-w-none">
+            <span className="block text-[10px] min-[390px]:text-xs sm:text-sm text-[#FF7828] font-bold tracking-wide truncate max-w-[170px] min-[390px]:max-w-[240px] sm:max-w-none whitespace-nowrap">
               Bishop of Nnewi • Anglican Communion
             </span>
           </div>
         </Link>
 
         {/* Center: Desktop Navigation Links in Frosted Island Container (Bigger Text) */}
-        <div className="hidden lg:flex items-center gap-1.5 p-1.5 rounded-full bg-[#141416]/90 border border-white/[0.08] backdrop-blur-xl shadow-inner">
+        <div className="hidden lg:flex items-center gap-1.5 p-1.5 rounded-full bg-[#141416]/90 border border-white/[0.08] backdrop-blur-xl shadow-inner shrink-0">
           {navLinks.map((link) => {
             const active = isActive(link.href);
             return (
               <Link
                 key={link.name}
                 href={link.href}
-                className={`px-4.5 py-2.5 rounded-full text-sm font-semibold tracking-wide transition-all duration-200 ${active
+                className={`px-3.5 xl:px-4.5 py-2.5 rounded-full text-xs xl:text-sm font-semibold tracking-wide transition-all duration-200 whitespace-nowrap shrink-0 ${active
                   ? 'bg-[#FF5500] text-white shadow-md shadow-[#FF5500]/30 font-bold'
                   : 'text-zinc-300 hover:text-white hover:bg-white/[0.08]'
                   }`}
               >
-                {link.name}
+                <span className="whitespace-nowrap">{link.name}</span>
               </Link>
             );
           })}
@@ -186,12 +186,12 @@ export default function Navbar() {
               key={link.name}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
-              className={`block px-5 py-3.5 rounded-2xl text-base font-semibold transition active:scale-[0.98] ${isActive(link.href)
+              className={`block px-5 py-3.5 rounded-2xl text-base font-semibold transition active:scale-[0.98] whitespace-nowrap ${isActive(link.href)
                 ? 'bg-[#FF5500] text-white font-bold shadow-lg shadow-[#FF5500]/25'
                 : 'text-zinc-300 hover:bg-white/[0.05] hover:text-white'
                 }`}
             >
-              {link.name}
+              <span className="whitespace-nowrap">{link.name}</span>
             </Link>
           ))}
 
